@@ -2,8 +2,8 @@ import React from "react";
 
 function NavTabs(props) {
   return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
+    <ul className="navbar is-white is-spaced nav-tabs">
+      <li className="navbar-item">
         <a
           href="#home"
           onClick={() => props.handlePageChange("Home")}
@@ -12,7 +12,7 @@ function NavTabs(props) {
           Home
         </a>
       </li>
-      <li className="nav-item">
+      <li className="navbar-item">
         <a
           href="#search"
           onClick={() => props.handlePageChange("Search")}
@@ -21,7 +21,7 @@ function NavTabs(props) {
           Search
         </a>
       </li>
-      <li className="nav-item">
+      <li className="navbar-item">
         <a
           href="#contact"
           onClick={() => props.handlePageChange("Contact")}

@@ -7,10 +7,10 @@ const Home = () => (
         <p className="thick">Worry Free Pet Boarding.</p>
         <div className="columns">
           <div className="column is-narrow">
-            <button class="button is-dark is-medium">Book A Stay</button>
+            <button className="button is-dark is-medium">Book A Stay</button>
           </div>
           <div className="column">
-            <button class="button is-light is-medium">Contact</button>
+            <button className="button is-light is-medium">Contact</button>
           </div>
         </div>
       </div>
