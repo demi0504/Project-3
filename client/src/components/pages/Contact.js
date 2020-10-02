@@ -5,24 +5,24 @@ const Contact = () => (
   <div>
     <h1>Contact Us!</h1>
     <OneImage />
-    <section class="section">
-      <div class="container">
-        <div class="field">
-          <div class="control">
-            <input class="input is-primary" type="text" placeholder="Name" />
+    <section className="section">
+      <div className="container">
+        <div className="field">
+          <div className="control">
+            <input className="input is-primary" type="text" placeholder="Name" />
           </div>
         </div>
-        <div class="field">
-          <div class="control">
-            <input class="input is-primary" type="text" placeholder="Email" />
+        <div className="field">
+          <div className="control">
+            <input className="input is-primary" type="text" placeholder="Email" />
           </div>
         </div>
 
-        <div class="control">
-          <textarea class="textarea has-fixed-size" placeholder="Message"></textarea>
+        <div className="control">
+          <textarea className="textarea has-fixed-size" placeholder="Message"></textarea>
         </div>
-        <div class="control">
-          <button class="button is-primary">Submit</button>
+        <div className="control">
+          <button className="button is-primary">Submit</button>
         </div>
       </div>
     </section>
