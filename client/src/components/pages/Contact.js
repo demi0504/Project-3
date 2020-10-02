@@ -1,5 +1,6 @@
 import React from "react";
 import OneImage from "../OneImage"
+import ThreeImage from "../ThreeImage"
 
 const Contact = () => (
   <div>
@@ -26,6 +27,7 @@ const Contact = () => (
         </div>
       </div>
     </section>
+    <ThreeImage />
   </div>
 );
 

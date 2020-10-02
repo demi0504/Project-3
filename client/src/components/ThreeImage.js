@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import OneAPI from "../utils/OneAPI";
+import ThreeApi from "../utils/ThreeAPI";
 
-class OneImage extends Component {
+class ThreeImage extends Component {
   state = {
     result: {}
   };
@@ -11,7 +11,7 @@ class OneImage extends Component {
   }
 
   searchDog = query => {
-    OneAPI.findOneDog(query)
+    ThreeApi.findThreeDog(query)
       .then(res =>
         {console.log(res.data)
         this.setState({ result: res.data.message })})
@@ -34,4 +34,4 @@ class OneImage extends Component {
 }
 
 
-export default OneImage;
+export default ThreeImage;
