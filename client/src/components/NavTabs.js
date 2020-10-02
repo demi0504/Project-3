@@ -30,6 +30,15 @@ function NavTabs(props) {
           Contact
         </a>
       </li>
+      <li className="navbar-item">
+        <a
+          href="#signup"
+          onClick={() => props.handlePageChange("SignUp")}
+          className={props.currentPage === "SignUp" ? "nav-link active" : "nav-link"}
+        >
+          Sign Up
+        </a>
+      </li>
     </ul>
   );
 }
