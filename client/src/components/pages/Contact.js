@@ -1,8 +1,10 @@
 import React from "react";
+import OneImage from "../OneImage"
 
 const Contact = () => (
   <div>
     <h1>Contact Us!</h1>
+    <OneImage />
     <section class="section">
       <div class="container">
         <div class="field">
