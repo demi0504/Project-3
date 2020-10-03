@@ -18,14 +18,18 @@ class ThreeImage extends Component {
       .catch(err => console.log(err));
   };
 
-  
-
   render() {
     return (
       <div>
         <ul>
           <li>
-            <img alt={this.state.result} src={this.state.result}/>
+            <img alt={this.state.result[0]} src={this.state.result[0]}/>
+          </li>
+          <li>
+            <img alt={this.state.result[1]} src={this.state.result[1]}/>
+          </li>
+          <li>
+            <img alt={this.state.result[2]} src={this.state.result[2]}/>
           </li>
         </ul>
       </div>
