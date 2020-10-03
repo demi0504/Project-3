@@ -1,18 +1,47 @@
 import React from "react";
-import SignupModal from "../SignupModal";
+import Modal from "../SignupModal";
 
-const SignUp = () => (
+
+class Signup extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      modalState: false
+    };
+    
+    this.openModal = this.openModal.bind(this);
+  }
   
+  openModal() {    
+    this.setState((prev, props) => {
+      const newState = !prev.modalState;
+      
+      return { modalState: newState };
+    });
+  }
+  
+  render() {
+    return(
+      <section className="section">
+        <div className="container">
+          <div className="has-text-centered content">
+            
+            <a className="button is-primary" onClick={this.openModal}>
+              Add Your Business!
+            </a>
+          </div>
+          
+          <Modal 
+            closeModal={this.openModal} 
+            modalState={this.state.modalState} 
+          >
+            
+          </Modal>
+        </div>
+      </section>
+    );
+  }
+}
 
-  <div>
-    <h1>Sign Up</h1>
-    <button className="add button is-success">
-      Add Your Business!
-    </button>
-    <SignupModal>
-
-    </SignupModal>
-  </div>
-);
-
-export default SignUp;
+export default Signup;
