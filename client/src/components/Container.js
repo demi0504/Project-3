@@ -3,6 +3,7 @@ import NavTabs from "./NavTabs";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Contact from "./pages/Contact";
+import Signup from "./pages/SignUp";
 
 class Container extends Component {
   state = {
@@ -18,8 +19,10 @@ class Container extends Component {
       return <Home />;
     } else if (this.state.currentPage === "Search") {
       return <Search />;
-    } else {
+    } else if (this.state.currentPage === "Contact") {
       return <Contact />;
+    } else {
+      return <Signup />;
     }
   };
 
