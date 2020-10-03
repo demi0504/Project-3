@@ -13,8 +13,7 @@ class OneImage extends Component {
   searchDog = query => {
     OneAPI.findOneDog(query)
       .then(res =>
-        {console.log(res.data)
-        this.setState({ result: res.data.message })})
+        {this.setState({ result: res.data.message })})
       .catch(err => console.log(err));
   };
 
