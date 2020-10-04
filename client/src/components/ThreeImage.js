@@ -13,8 +13,7 @@ class ThreeImage extends Component {
   searchDog = query => {
     ThreeApi.findThreeDog(query)
       .then(res =>
-        {console.log(res.data)
-        this.setState({ result: res.data.message })})
+        {this.setState({ result: res.data.message })})
       .catch(err => console.log(err));
   };
 
