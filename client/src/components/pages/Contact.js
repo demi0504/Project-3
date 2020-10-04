@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import OneImage from "../OneImage"
 import ThreeImage from "../ThreeImage"
+import ContactAlertModal from "../ContactAlertModal";
 
 class Contact extends Component {
   state = {
@@ -17,17 +18,32 @@ class Contact extends Component {
     });
   };
 
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      modalState: false
+    };
+    
+    this.openModal = this.openModal.bind(this);
+  }
+
   handleFormSubmit = event => {
     event.preventDefault();
-    //Should change alert to modal
-    alert(`${this.state.fullName}, message sent!`);
     this.setState({
       fullName: "",
       Email: "",
       Message: ""
     });
   };
-  
+
+  openModal() {    
+    this.setState((prev, props) => {
+      const newState = !prev.modalState;
+      
+      return { modalState: newState };
+    });
+  }
   
   render() {
     return (
@@ -75,8 +91,15 @@ class Contact extends Component {
               <button 
               className="button is-primary"
               onClick={this.handleFormSubmit}
+              onClick={this.openModal}
               >Submit</button>
             </div>
+            <ContactAlertModal 
+            closeModal={this.openModal} 
+            modalState={this.state.modalState} 
+            >
+              {this.state.fullName}
+            </ContactAlertModal>
           </div>
         </section>
         <ThreeImage />
