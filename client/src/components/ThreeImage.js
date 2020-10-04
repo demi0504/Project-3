@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ThreeApi from "../utils/ThreeAPI";
+import "./style/imgstyle.css";
 
 class ThreeImage extends Component {
   state = {
@@ -22,13 +23,13 @@ class ThreeImage extends Component {
       <div>
         <ul>
           <li>
-            <img alt={this.state.result[0]} src={this.state.result[0]}/>
+            <img alt={this.state.result[0]} src={this.state.result[0]} className="style"/>
           </li>
           <li>
-            <img alt={this.state.result[1]} src={this.state.result[1]}/>
+            <img alt={this.state.result[1]} src={this.state.result[1]} className="style"/>
           </li>
           <li>
-            <img alt={this.state.result[2]} src={this.state.result[2]}/>
+            <img alt={this.state.result[2]} src={this.state.result[2]} className="style"/>
           </li>
         </ul>
       </div>
