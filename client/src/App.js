@@ -1,9 +1,25 @@
 import React from 'react';
-import Container from "./components/Container";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Search from './components/pages/Search';
+import Home from './components/pages/Home';
+import SignUp from './components/pages/SignUp';
+import Contact from './components/pages/Contact';
+import NavTabs from './components/NavTabs';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
-    <Container />
+    <Router>
+      <div>
+        <NavTabs />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/search" component={Search} />
+        <Route path="/contact" component={Contact} />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

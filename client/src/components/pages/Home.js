@@ -1,10 +1,8 @@
 import React from "react";
-
 import { Hero } from "react-bulma-components";
 import { Columns, Container } from 'react-bulma-components'
 import { Button } from "react-bulma-components";
-import Search from "./Search";
-import SearchBtn from "../SearchBtn";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Home = () => (
   <div>
@@ -13,8 +11,14 @@ const Home = () => (
         <div className="hero-body">
           <Container>
             <p className="thick">Worry Free Pet Boarding.</p>
-                <SearchBtn />
-                <Button className="is-light is-medium">Contact</Button>
+            <Link to={{ pathname: "/search" }}>
+              <Button className="is-dark is-medium">Book A Stay
+              </Button>
+            </Link>
+            <Link to={{ pathname: "/contact" }}>
+              <Button className="is-light is-medium">Contact
+              </Button>
+            </Link>
           </Container>
         </div>   
     </Hero>
@@ -46,7 +50,10 @@ const Home = () => (
             <p className="about">
               If you would like to have your kennel added to our site fill out our sign up 
               form and start receiving bookings today!
-              <Button className="is-dark is-medium sign-up">Sign Up</Button>
+              <Link to={{ pathname: "/signup" }}>
+              <Button className="is-dark is-medium sign-up">Sign Up
+              </Button>
+            </Link>
             </p> 
           </Columns.Column>
           <Columns.Column className="is-5 is-offset-1">
