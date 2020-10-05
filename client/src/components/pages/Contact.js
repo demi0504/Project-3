@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import OneImage from "../OneImage"
 import ThreeImage from "../ThreeImage"
 import ContactAlertModal from "../ContactAlertModal";
+import DogSVG from "../DogSVG/DogSVG"
 
 class Contact extends Component {
   state = {
@@ -48,6 +49,7 @@ class Contact extends Component {
   render() {
     return (
       <div>
+        <DogSVG />
         <h1>Contact Us!</h1>
         <OneImage />
         <section className="section">

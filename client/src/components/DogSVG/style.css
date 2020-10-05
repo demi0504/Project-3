@@ -1,0 +1,13 @@
+#demo-svg path {
+    stroke-dasharray: 520;
+    stroke-dashoffset: 0;
+  }
+
+  .centered {
+    position: relative;
+    right: 25%;
+    bottom: 10%;
+    -webkit-transform: translateX(25%) translateY(10%);
+    -ms-transform: translateX(25%) translateY(10%);
+    transform: translateX(25%) translateY(10%);
+  }
