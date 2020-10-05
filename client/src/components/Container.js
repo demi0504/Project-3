@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Contact from "./pages/Contact";
 import Signup from "./pages/SignUp";
+import Footer from "./Footer";
 
 class Container extends Component {
   state = {
@@ -34,6 +35,7 @@ class Container extends Component {
           handlePageChange={this.handlePageChange}
         />
         {this.renderPage()}
+        <Footer />
       </div>
     );
   }
