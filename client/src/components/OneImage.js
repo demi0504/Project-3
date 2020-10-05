@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import OneAPI from "../utils/OneAPI";
-import "./style/imgstyle.css";
+
 
 class OneImage extends Component {
   state = {
@@ -23,11 +23,7 @@ class OneImage extends Component {
   render() {
     return (
       <div>
-        <ul>
-          <li>
-            <img alt={this.state.result} src={this.state.result} className="style"/>
-          </li>
-        </ul>
+        <img alt={this.state.result} src={this.state.result} />
       </div>
     );
   }

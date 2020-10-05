@@ -1,6 +1,9 @@
 import React from "react";
 import Modal from "../SignupModal";
 import OneImage from "../OneImage";
+import { Hero } from "react-bulma-components";
+import { Columns, Container } from 'react-bulma-components'
+import { Button } from "react-bulma-components";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -24,6 +27,17 @@ class Signup extends React.Component {
   render() {
     return(
       <div>
+        <Hero className="is-medium is-light is-bold">
+            <div className="hero-body">
+              <Container>
+                <h1 className="title">Become A Part Of AirBob!</h1>
+                <h2 className="subtitle">
+                  AirBob makes it simple for guests to look up your rates, reviews and availability. Once your business is added, 
+                  guests can begin booking their pets with you!
+                </h2>
+              </Container>
+            </div>   
+        </Hero>
         <section className="section">
           <OneImage />
         </section>
