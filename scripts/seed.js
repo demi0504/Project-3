@@ -1,12 +1,12 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect("mongodb://localhost/professional", {
+mongoose.connect("mongodb://localhost/facility", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
 
-let professionalSeed = [
+let facilitySeed = [
   {
     day: new Date().setDate(new Date()),
     profName: "Paw Patrol",
@@ -1311,8 +1311,8 @@ let professionalSeed = [
   }
 ];
 
-db.Professional.deleteMany({})
-  .then(() => db.Professional.collection.insertMany(professionalSeed))
+db.Facility.deleteMany({})
+  .then(() => db.Facility.collection.insertMany(facilitySeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
