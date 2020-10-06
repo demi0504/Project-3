@@ -19,8 +19,8 @@ class Search extends Component {
   render() {
     return (
       <div className="container">
-        <p className="column is-5 is-offset-1 thick"> some other kind of weird title</p>
-          <h1 className="column is-5 is-offset-1 thick"><strong>What are the dates of your stay?</strong></h1>
+        <p className="column is-5 is-offset-1 thick"><strong>Bring out ye dogs</strong></p>
+          <h1 className="column is-5 is-offset-2 thick">What are the dates of your stay?</h1>
         <div className="section">
           <Columns>
             <label className="column is-offset-one-fifth" for="start">Check In</label>
@@ -66,9 +66,17 @@ class Search extends Component {
               </div>  
           
           <hr/>
-          <h1>Boarders in Nashville</h1>
-          
-          
+          <h1><strong>Boarders in Nashville</strong></h1>
+            <div class="field has-addons">
+              <div class="control">
+                <input class="input" type="text" placeholder="Find a Boarder"/>
+                  </div>
+                <div class="control">
+                  <a class="button is-info">
+                    Search
+                  </a>
+                </div>
+              </div>
           </div>
         );
                 }
