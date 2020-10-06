@@ -2,8 +2,12 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Navbar } from 'react-bulma-components';
 
-function NavTabs() {
+function NavTabs(props) {
   const location = useLocation();
+
+  // function toggleBurgerMenu() {
+  //   document.querySelector('.navbar-menu').toggle('is-active');
+  // }
 
   return (
     <Navbar className="is-light is-spaced nav-tabs">
@@ -12,6 +16,12 @@ function NavTabs() {
         <i class="fas fa-paw"></i>
         </Navbar.Item>
       </Navbar.Brand>
+      {/* <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic"
+          onClick={toggleBurgerMenu}>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+      </a> */}
       <Navbar.Item>
         <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
           Home

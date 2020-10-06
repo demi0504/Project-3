@@ -1,4 +1,5 @@
 import React from "react";
+import { Columns, Container } from 'react-bulma-components'
 
 const Search = () => (
   <div>
@@ -13,8 +14,7 @@ const Search = () => (
 
     <h3>Does your dog require grooming services?</h3>
       {/* yes or no selector */}
-
-  </div>
+</div>
 );
 
 export default Search;
