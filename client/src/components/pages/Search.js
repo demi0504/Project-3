@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { Columns, Container } from 'react-bulma-components'
-
-
-
-
-
+import SearchContainer from "../SearchCard/SearchContainer"
 
 class Search extends Component {
   constructor(props) {
