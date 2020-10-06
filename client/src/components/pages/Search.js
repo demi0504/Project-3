@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Columns, Container } from 'react-bulma-components'
+<<<<<<< HEAD
+=======
+import SearchContainer from "../SearchCard/SearchContainer"
+>>>>>>> master
 
 class Search extends Component {
   constructor(props) {
@@ -77,6 +81,9 @@ class Search extends Component {
                   </div>
                 </div>
             </div>
+
+            <SearchContainer />
+
           </div>
         );
                 }
