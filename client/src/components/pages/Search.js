@@ -1,4 +1,5 @@
 import React from "react";
+import SearchContainer from "../SearchCard/SearchContainer"
 
 const Search = () => (
   <div>
@@ -13,6 +14,9 @@ const Search = () => (
 
     <h3>Does your dog require grooming services?</h3>
       {/* yes or no selector */}
+
+
+    <SearchContainer />
 
   </div>
 );
