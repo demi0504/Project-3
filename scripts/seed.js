@@ -7,6 +7,7 @@ mongoose.connect("mongodb://localhost/facility", {
 });
 
 let facilitySeed = [
+  //Nashville
   {
     day: new Date().setDate(new Date()),
     profName: "Paw Patrol",
@@ -682,7 +683,7 @@ let facilitySeed = [
         ]
       }
     ],
-  }  
+  },
 
 
   {
@@ -1331,6 +1332,7 @@ let facilitySeed = [
       }
     ]
   },
+
 
 // LA
 {
@@ -2008,7 +2010,7 @@ let facilitySeed = [
       ]
     }
   ],
-}  
+},
 
 
 {
@@ -3335,7 +3337,7 @@ let facilitySeed = [
       ]
     }
   ],
-}  
+},
 
 
 {
@@ -4662,7 +4664,7 @@ let facilitySeed = [
       ]
     }
   ],
-}  
+},
 
 
 {
@@ -5989,7 +5991,7 @@ let facilitySeed = [
       ]
     }
   ],
-}  
+},
 
 
 {
