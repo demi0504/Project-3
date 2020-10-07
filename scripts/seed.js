@@ -11,6 +11,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "Paw Patrol",
     address: "252 Bransford Avenue Nashville, TN 37204",
+    city:"Nashville",
+    zip: 37204,
     phone: "(555) 555-5550",
     hours: [
       {
@@ -171,6 +173,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "Spot Sleeper",
     address: "919 Gallatin Pike S Madison, TN 37115",
+    city:"Nashville",
+    zip: 37115,
     phone: "(555) 555-5551",
     hours: [
       {
@@ -307,6 +311,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "Where's Fido?",
     address: "2318 12th Avenue S Nashville, TN 37204",
+    city:"Nashville",
+    zip: 37204,
     phone: "(555) 555-5552",
     hours: [
       {
@@ -412,6 +418,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "Prissy Pooch",
     address: "4121 Hillsboro Pike Nashville, TN 37215",
+    city:"Nashville",
+    zip: 37215,
     phone: "(555) 555-5553",
     hours: [
       {
@@ -572,6 +580,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "Nashville Tail Blazers",
     address: "2407 DICKERSON PIKE NASHVILLE, TN, 37207",
+    city:"Nashville",
+    zip: 37207,
     phone: "(615) 679-8444",
     hours: [
       {
@@ -678,7 +688,9 @@ let facilitySeed = [
   {
     day: new Date().setDate(new Date()),
     profName: "South Paws",
-    address: "1315 8th Avenue South",
+    address: "1315 8th Avenue South 37203",
+    city:"Nashville",
+    zip: 37203,
     phone: "(615) 736-5700",
     hours: [
       {
@@ -749,6 +761,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "Pampered Pets",
     address: "149 Barker Road Nashville, TN 37214",
+    city:"Nashville",
+    zip: 37214,
     phone: "(615) 889-1500",
     hours: [
       {
@@ -840,6 +854,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "Camp Bow Wow",
     address: "470 Craighead Street Avenue Nashville, TN 37204",
+    city:"Nashville",
+    zip: 37204,
     phone: "(615) 385-2275",
     hours: [
       {
@@ -1000,6 +1016,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "The Belmont Pet Resort",
     address: "3206 Belmont Boulevard Nashville, TN 37212",
+    city:"Nashville",
+    zip: 37212,
     phone: "(615) 292-7529",
     hours: [
       {
@@ -1126,6 +1144,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "The Dog Spot",
     address: "5001 Alabama Ave. Nashville, TN 37209",
+    city:"Nashville",
+    zip: 37209,
     phone: "(615) 334-0000",
     hours: [
       {
@@ -1232,6 +1252,8 @@ let facilitySeed = [
     day: new Date().setDate(new Date()),
     profName: "Peace Love and Paws",
     address: "1221 Brick Church Pike Nashville, Tennessee 37207",
+    city:"Nashville",
+    zip: 37207,
     phone: "(615) 933-7297",
     hours: [
       {
