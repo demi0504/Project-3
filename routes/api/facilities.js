@@ -1,9 +1,6 @@
 const router = require("express").Router();
 const facilityController = require("../../controllers/facilitysController");
 
-// Contact routes
-router.use("/books", contactRoutes);
-
 // Matches with "/api/facilities"
 router
     .route("/")
