@@ -60,7 +60,17 @@ class Signup extends React.Component {
             </Columns>
           </Container>
         </section>
-        
+        <section>
+          <Container>
+            <Columns>
+            <Columns.Column className="is-full">
+              <div style={{textAlign: "center"}}>
+              <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074__340.jpg" />
+              </div>
+            </Columns.Column>
+            </Columns>
+          </Container>
+        </section>
       </div>
     );
   }
