@@ -42,3 +42,7 @@ code {
 .is-transparent {
   opacity: 0.3;
 }
+/*Navbar styling*/
+.fa-paw {
+  font-size: 30px;
+}

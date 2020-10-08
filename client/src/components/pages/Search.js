@@ -16,25 +16,30 @@ class Search extends Component {
     return (
       <div className="container">
         <p className="column is-5 is-offset-1 thick"><strong>Bring out ye dogs</strong></p>
-          <Container>
             <div className="section">
-            <Columns>
-              <Columns.Column>
-                <h1 className="column is-5 is-offset-1">What are the dates of your stay?</h1>
-                  <div class="field">
-                    <label className="label column is-offset-1" for="start">Check In</label>
-                    <input className="column is-offset-1" type="date" id="start" name="trip-start" value="2020-10-1" min="2020-01-01" max="2021-12-31"/>
-                  </div>
-              </Columns.Column>
-              <Columns.Column>
-                <div class="field">
-                  <label className="label" for="start">Check Out</label>
-                  <input className="column" type="date" id="start" name="trip-start" value="2020-10-1" min="2020-01-01" max="2021-12-31"/>
-                </div>
-              </Columns.Column>
-            </Columns>
+              <Container>
+                <Columns>
+                  <Columns.Column className="is-5">
+                    <h1>What are the dates of your stay?</h1>
+                    <Columns>
+                      <Columns.Column>
+                        <div class="field">
+                          <label className="label" for="start">Check In</label>
+                          <input type="date" id="start" name="trip-start" value="2020-10-1" min="2020-01-01" max="2021-12-31"/>
+                        </div>
+                      </Columns.Column>
+                      <Columns.Column>
+                        <div class="field">
+                          <label className="label" for="start">Check Out</label>
+                          <input type="date" id="start" name="trip-start" value="2020-10-1" min="2020-01-01" max="2021-12-31"/>
+                        </div>
+                      </Columns.Column>
+                    </Columns>
+                  </Columns.Column>
+                </Columns>
+              </Container>
             </div>
-          </Container>
+          
           
             <h1 className="column is-5 is-offset-1"><strong>How many dogs need boarding</strong></h1>
               <br/>
