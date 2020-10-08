@@ -35,7 +35,6 @@ class Signup extends React.Component {
                   AirBob makes it simple for guests to look up your rates, reviews and availability. Once your business is added, 
                   guests can begin booking their pets with you!
                 </h2>
-
               </Container>
             </div>   
         </Hero>
@@ -68,12 +67,4 @@ class Signup extends React.Component {
 }
 
 export default Signup;
-{/* <section className="section">
-          <OneImage />
-        </section>
-        <section className="section">
-          <OneImage />
-        </section>
-        <section className="section">
-          <OneImage />
-        </section> */}
+
