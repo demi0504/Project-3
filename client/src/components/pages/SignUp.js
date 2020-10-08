@@ -16,6 +16,9 @@ class Signup extends React.Component {
     this.openModal = this.openModal.bind(this);
   }
   
+
+
+
   openModal() {    
     this.setState((prev, props) => {
       const newState = !prev.modalState;

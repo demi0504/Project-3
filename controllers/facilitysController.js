@@ -15,6 +15,24 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findByCity: function(req, res) {
+    db.Facility
+      .findByCity(req.params.city)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByState: function(req, res) {
+    db.Facility
+      .findByState(req.params.state)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByZipCode: function(req, res) {
+    db.Facility
+      .findByZipCode(req.params.zipcode)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.Facility
       .create(req.body)
@@ -35,3 +53,4 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
+

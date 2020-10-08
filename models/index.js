@@ -1,4 +1,4 @@
 module.exports = {
-  Contact: require("./contact"),
+  User: require("./user"),
   Facility: require("./facility")
 };
