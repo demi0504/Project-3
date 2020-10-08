@@ -16,9 +16,6 @@ class Signup extends React.Component {
     this.openModal = this.openModal.bind(this);
   }
   
-
-
-
   openModal() {    
     this.setState((prev, props) => {
       const newState = !prev.modalState;
@@ -38,42 +35,45 @@ class Signup extends React.Component {
                   AirBob makes it simple for guests to look up your rates, reviews and availability. Once your business is added, 
                   guests can begin booking their pets with you!
                 </h2>
+
               </Container>
             </div>   
         </Hero>
         <section className="section">
-          <OneImage />
+          <Container>
+            <Columns>
+              <Columns.Column className="is-one-third">
+                <p className="about">Our website makes it easy for potential clients to find your business and see what services you offer.</p>
+              </Columns.Column>
+              <Columns.Column className="is-one-third">
+                <div className="has-text-centered content">
+                  <Button className="is-primary" onClick={this.openModal}>
+                    Add Your Business!
+                  </Button>
+                </div>
+                <Modal 
+                  closeModal={this.openModal} modalState={this.state.modalState}>
+                </Modal>
+              </Columns.Column>
+              <Columns.Column className="is-one-third">
+                <p className="about">Login to easily adjust pricing, services and hours all in one place. Here's another sentence for looks.</p>
+              </Columns.Column>
+            </Columns>
+          </Container>
         </section>
-        <section className="section">
-          <OneImage />
-        </section>
-        <section className="section">
-          <OneImage />
-        </section>
-        <section className="section">
-          <h1>Become a part of AirBob!</h1>
-          <p>AirBob makes it simple for guests to look up your rates, reviews and availability. Once your business is added, guests can begin booking their pets with you!</p>
-        </section>
-        <section className="section">
-          <div className="container">
-            <div className="has-text-centered content">
-              
-              <a className="button is-primary" onClick={this.openModal}>
-                Add Your Business!
-              </a>
-            </div>
-            
-            <Modal 
-              closeModal={this.openModal} 
-              modalState={this.state.modalState} 
-            >
-              
-            </Modal>
-          </div>
-        </section>
+        
       </div>
     );
   }
 }
 
 export default Signup;
+{/* <section className="section">
+          <OneImage />
+        </section>
+        <section className="section">
+          <OneImage />
+        </section>
+        <section className="section">
+          <OneImage />
+        </section> */}
