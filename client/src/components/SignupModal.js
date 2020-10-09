@@ -1,10 +1,71 @@
-import React from "react";
-
+import React, { useState } from "react";
+import API from "../../utils/API";
 const Modal = ({ closeModal, modalState }) => {
   if(!modalState) {
     return null;
   }
   
+  const [facilities, setFacilities] = useState([])
+  const [formObject, setFormObject] = useState({
+    name: "",
+    address: "",
+    city: "",
+    state: "",
+    zip: "",
+    phone: "",
+    about: "",
+    safety: "",
+    requirements: "",
+    src: "",
+    occupancy: "",
+    daycare: "",
+    boarding: "",
+    grooming: ""
+  })
+
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setFormObject({...formObject, [name]: value})
+  };
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (formObject.name && formObject.address && formObject.city && formObject.state && formObject.zip && formObject.phone) {
+      API.saveFacility({
+        name: formObject.name,
+        address: formObject.address,
+        city: formObject.city,
+        state: formObject.state,
+        zip: formObject.zip,
+        phone: formObject.phone,
+        about: formObject.about,
+        safety: formObject.safety,
+        requirements: formObject.requirements,
+        src: formObject.src,
+        occupancy: formObject.occupancy,
+        daycare: formObject.daycare,
+        boarding: formObject.boarding,
+        grooming: formObject.grooming
+      })
+        .then(() => setFormObject({
+          name: "",
+          address: "",
+          city: "",
+          state: "",
+          zip: "",
+          phone: "",
+          about: "",
+          safety: "",
+          requirements: "",
+          src: "",
+          occupancy: "",
+          daycare: "",
+          boarding: "",
+          grooming: ""
+        }))
+    } 
+  };
+
   return(
     <div className="modal is-active">
       <div className="modal-background" onClick={closeModal} />
