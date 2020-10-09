@@ -1,42 +1,37 @@
 import React, { Component } from "react";
+import Axios from 'axios';
 import OneImage from "../OneImage"
 import ThreeImage from "../ThreeImage"
 import ContactAlertModal from "../ContactAlertModal";
 import DogSVG from "../DogSVG/DogSVG"
 
 class Contact extends Component {
-  state = {
-    fullName: "",
-    Email: "",
-    Message: ""
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-
-    this.setState({
-      [name]: value
-    });
-  };
-
   constructor(props) {
     super(props);
-    
     this.state = {
-      modalState: false
-    };
-    
-    this.openModal = this.openModal.bind(this);
+        name: '',
+        email: '',
+        message: ''
+    }
   }
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    this.setState({
-      fullName: "",
-      Email: "",
-      Message: ""
-    });
+  handleInputChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
   };
+
+  handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    console.log(event.target);
+
+    const { name, email, message } = this.state;
+
+    const form = await Axios.post('/api/contact-form', {
+      name, 
+      email, 
+      message
+    })
+  }
 
   openModal() {    
     this.setState((prev, props) => {
@@ -54,15 +49,16 @@ class Contact extends Component {
         <OneImage />
         <section className="section">
           <div className="container">
+            <form id="contact-form" onSubmit={this.handleFormSubmit.bind(this)} method="POST">
             <div className="field">
               <div className="control">
                 <input 
                 className="input is-primary" 
                 type="text" 
                 placeholder="Name" 
-                value={this.state.fullName}
-                name="fullName"
-                onChange={this.handleInputChange}
+                value={this.state.name}
+                name="name"
+                onChange={this.handleInputChange.bind(this)}
                 />
               </div>
             </div>
@@ -72,9 +68,9 @@ class Contact extends Component {
                 className="input is-primary" 
                 type="text" 
                 placeholder="Email" 
-                value={this.state.Email}
-                name="Email"
-                onChange={this.handleInputChange}
+                value={this.state.email}
+                name="email"
+                onChange={this.handleInputChange.bind(this)}
                 />
               </div>
             </div>
@@ -83,18 +79,14 @@ class Contact extends Component {
               <textarea 
                 className="textarea has-fixed-size" 
                 placeholder="Message"
-                value={this.state.Message}
-                name="Message"
-                onChange={this.handleInputChange}
+                value={this.state.message}
+                name="message"
+                onChange={this.handleInputChange.bind(this)}
               ></textarea>
             </div>
             
             <div className="control">
-              <button 
-              className="button is-primary"
-              onClick={this.handleFormSubmit}
-              onClick={this.openModal}
-              >Submit</button>
+              <button className="button is-primary">Submit</button>
             </div>
             <ContactAlertModal 
             closeModal={this.openModal} 
@@ -102,6 +94,9 @@ class Contact extends Component {
             >
               {this.state.fullName}
             </ContactAlertModal>
+            {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
+            {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
+            </form>
           </div>
         </section>
         <ThreeImage />
