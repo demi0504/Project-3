@@ -4,10 +4,17 @@
   }
 
   .centered {
-    position: relative;
+    /* position: fixed; */
     right: 25%;
-    bottom: 10%;
-    -webkit-transform: translateX(25%) translateY(10%);
-    -ms-transform: translateX(25%) translateY(10%);
-    transform: translateX(25%) translateY(10%);
+    /* bottom: 10%; */
+    -webkit-transform: translateX(30%) translateY(1%);
+    -ms-transform: translateX(30%) translateY(1%);
+    transform: translateX(30%) translateY(1%);
+  }
+
+  .behind {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: -1;
   }

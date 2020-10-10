@@ -22,10 +22,11 @@ export default class DogSVG2 extends Component {
     return (
     
         <svg
+        className="behind"
         id="demo-svg"
         x="0px" 
         y="0px" 
-        viewBox="0 0 175 175"
+        viewBox="0 0 200 200"
       >
   
         <path 
