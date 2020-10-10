@@ -91,7 +91,7 @@ const Modal = ({ closeModal }) => {
             <Input 
               onChange={handleInputChange}
               name="address"
-              placeholder=""
+              placeholder="Street"
               value={formObject.address}
             />
             <div className="columns">
@@ -197,22 +197,29 @@ const Modal = ({ closeModal }) => {
             <h2>Give a brief description of your business:</h2>
             <Textarea
               onChange={handleInputChange}
-              name="description"
+              name="about"
               placeholder=""
-              value={formObject.description}
+              value={formObject.about}
+            />
+            <h2>What are your safety precautions or procedures?</h2>
+            <Textarea
+              onChange={handleInputChange}
+              name="safety"
+              placeholder="Ex: Facilities monitored 24/7.  Live web cams.  Staff certified in first aid and CPR."
+              value={formObject.safety}
             />
             <h2>Do you have any requirements?</h2>
             <Textarea
               onChange={handleInputChange}
               name="requirements"
-              placeholder=""
+              placeholder="Ex: All Dogs must have up to date vet records."
               value={formObject.requirements}
             />
             <h2>Do you have a website?</h2>
             <Input 
               onChange={handleInputChange}
               name="src"
-              placeholder=""
+              placeholder="http://www. yourwebsite .com/"
               value={formObject.src}
             />
             <h2>Do you offer day care services?</h2>
