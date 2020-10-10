@@ -229,7 +229,7 @@ const Modal = ({ closeModal }) => {
                            value="Yes"
                            checked={formObject.daycare === "Yes"}
                            onChange={handleInputChange}
-                           name="answer"
+                           name="daycare"
                     />
                     Yes
                 </label>
@@ -239,7 +239,7 @@ const Modal = ({ closeModal }) => {
                            value="No"
                            checked={formObject.daycare === "No"}
                            onChange={handleInputChange}
-                           name="answer"
+                           name="daycare"
                     />
                     No
                 </label>
@@ -251,7 +251,7 @@ const Modal = ({ closeModal }) => {
                            value="Yes"
                            checked={formObject.boarding === "Yes"}
                            onChange={handleInputChange}
-                           name="answer2"
+                           name="boarding"
                     />
                     Yes
                 </label>
@@ -261,7 +261,7 @@ const Modal = ({ closeModal }) => {
                            value="No"
                            checked={formObject.boarding === "No"}
                            onChange={handleInputChange}
-                           name="answer2"
+                           name="boarding"
                     />
                     No
                 </label>
@@ -273,7 +273,7 @@ const Modal = ({ closeModal }) => {
                            value="Yes"
                            checked={formObject.grooming === "Yes"}
                            onChange={handleInputChange}
-                           name="answer3"
+                           name="grooming"
                     />
                     Yes
                 </label>
@@ -283,7 +283,7 @@ const Modal = ({ closeModal }) => {
                            value="No"
                            checked={formObject.grooming === "No"}
                            onChange={handleInputChange}
-                           name="answer3"
+                           name="grooming"
                     />
                     No
                 </label>
