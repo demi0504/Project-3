@@ -13,9 +13,9 @@ const facilitySchema = new Schema({
     requirements: { type: String },
     src: { type: String },
     occupancy: { type: Number },
-    daycare: { type: Boolean },
-    boarding: { type: Boolean },
-    grooming: { type: Boolean }
+    daycare: { type: String },
+    boarding: { type: String },
+    grooming: { type: String }
 });
 
 

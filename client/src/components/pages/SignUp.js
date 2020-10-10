@@ -10,17 +10,18 @@ class Signup extends React.Component {
     super(props);
     
     this.state = {
-      modalState: false
+      isModalOpen: false
     };
     
     this.openModal = this.openModal.bind(this);
   }
   
-  openModal() {    
+  openModal() {  
+  
     this.setState((prev, props) => {
-      const newState = !prev.modalState;
+      const newState = !prev.isModalOpen;
       
-      return { modalState: newState };
+      return { isModalOpen: newState };
     });
   }
   
@@ -50,9 +51,9 @@ class Signup extends React.Component {
                     Add Your Business!
                   </Button>
                 </div>
-                <Modal 
-                  closeModal={this.openModal} modalState={this.state.modalState}>
-                </Modal>
+
+                { this.state.isModalOpen && <Modal closeModal={this.openModal} />}
+                                
               </Columns.Column>
               <Columns.Column className="is-one-third">
                 <p className="about">Login to easily adjust pricing, services and hours all in one place. Here's another sentence for looks.</p>
