@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import API from "../../utils/API";
+import API from "../utils/API";
+import Input from "./Input";
+import Textarea from "./TextArea";
+
+
 const Modal = ({ closeModal, modalState }) => {
-  if(!modalState) {
-    return null;
-  }
+  
   
   const [facilities, setFacilities] = useState([])
   const [formObject, setFormObject] = useState({
@@ -22,6 +24,8 @@ const Modal = ({ closeModal, modalState }) => {
     boarding: "",
     grooming: ""
   })
+
+
 
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -77,17 +81,19 @@ const Modal = ({ closeModal, modalState }) => {
         <section className="modal-card-body">
           <div className="content">
             <h2>Facility Name</h2>
-            <div className="field">
-              <div className="control">
-                <input className="input is-primary" type="text" placeholder="" />
-              </div>
-            </div>
+            <Input 
+              onChange={handleInputChange}
+              name="name"
+              placeholder=""
+              value={formObject.name}
+            />
             <h2>Address</h2>
-            <div className="field">
-              <div className="control">
-                <input className="input is-primary" type="text" placeholder="Street Number" />
-              </div>
-            </div>
+            <Input 
+              onChange={handleInputChange}
+              name="address"
+              placeholder=""
+              value={formObject.address}
+            />
             <div className="columns">
               <div className="column">
                 <div className="control">
@@ -159,61 +165,103 @@ const Modal = ({ closeModal, modalState }) => {
               </div>
             </div>
             <h2>Phone</h2>
-            <div className="field">
-              <div className="control">
-                <input className="input is-primary" type="text" placeholder="Ex: 615-997-4323" />
-              </div>
-            </div>
+            <Input 
+              onChange={handleInputChange}
+              name="phone"
+              placeholder=""
+              value={formObject.phone}
+            />
             <h2>Max Occupancy</h2>
-            <div className="field">
-              <div className="control">
-                <input className="input is-primary" type="text" placeholder="Ex: 20" />
-              </div>
-            </div>
+            <Input 
+              onChange={handleInputChange}
+              name="occupancy"
+              placeholder=""
+              value={formObject.occupancy}
+            />
             <h2>Give a brief description of your business:</h2>
-            <div className="control">
-              <textarea className="textarea has-fixed-size is-primary" placeholder=""></textarea>
-            </div>
+            <Textarea
+              onChange={handleInputChange}
+              name="description"
+              placeholder=""
+              value={formObject.description}
+            />
             <h2>Do you have any requirements?</h2>
-            <div className="control">
-              <textarea className="textarea has-fixed-size is-primary" placeholder="Ex: Must have up to date vet records."></textarea>
-            </div>
+            <Textarea
+              onChange={handleInputChange}
+              name="requirements"
+              placeholder=""
+              value={formObject.requirements}
+            />
             <h2>Do you have a website?</h2>
-            <div className="field">
-              <div className="control">
-                <input className="input is-primary" type="text" placeholder="" />
-              </div>
-            </div>
+            <Input 
+              onChange={handleInputChange}
+              name="src"
+              placeholder=""
+              value={formObject.src}
+            />
             <h2>Do you offer day care services?</h2>
             <div className="control">
                 <label className="radio">
-                    <input type="radio" value="true" name="answer" />
+                    <input type="radio"
+                           value="Yes"
+                           checked={formObject.daycare === "Yes"}
+                           onChange={handleInputChange}
+                           name="answer"
+                    />
                     Yes
                 </label>
+                
                 <label className="radio">
-                    <input type="radio" value="false" name="answer" />
+                    <input type="radio"
+                           value="No"
+                           checked={formObject.daycare === "No"}
+                           onChange={handleInputChange}
+                           name="answer"
+                    />
                     No
                 </label>
             </div>
             <h2>Do you offer boarding services?</h2>
             <div className="control">
                 <label className="radio">
-                    <input type="radio" value="true" name="answer2" />
+                    <input type="radio"
+                           value="Yes"
+                           checked={formObject.boarding === "Yes"}
+                           onChange={handleInputChange}
+                           name="answer2"
+                    />
                     Yes
                 </label>
+                
                 <label className="radio">
-                    <input type="radio" value="false" name="answer2" />
+                    <input type="radio"
+                           value="No"
+                           checked={formObject.boarding === "No"}
+                           onChange={handleInputChange}
+                           name="answer2"
+                    />
                     No
                 </label>
             </div>
             <h2>Do you offer grooming services?</h2>
             <div className="control">
                 <label className="radio">
-                    <input type="radio" value="true" name="answer3" />
+                    <input type="radio"
+                           value="Yes"
+                           checked={formObject.grooming === "Yes"}
+                           onChange={handleInputChange}
+                           name="answer3"
+                    />
                     Yes
                 </label>
+                
                 <label className="radio">
-                    <input type="radio" value="false" name="answer3" />
+                    <input type="radio"
+                           value="No"
+                           checked={formObject.grooming === "No"}
+                           onChange={handleInputChange}
+                           name="answer3"
+                    />
                     No
                 </label>
             </div>

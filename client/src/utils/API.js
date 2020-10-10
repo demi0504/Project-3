@@ -10,16 +10,16 @@ export default {
       return axios.get("/api/facilities/" + id);
     },
 
-    getFacilityCity: function(id) {
+    getFacilityCity: function(city) {
         return axios.get("/api/facilities/" + city);
     },
 
-    getFacilityState: function(id) {
-        return axios.get("/api/facilities/" + id);
+    getFacilityState: function(state) {
+        return axios.get("/api/facilities/" + state);
     },
 
-    getFacilityZip: function(id) {
-        return axios.get("/api/facilities/" + id);
+    getFacilityZip: function(zip) {
+        return axios.get("/api/facilities/" + zip);
     },
    
     deleteFacility: function(id) {
