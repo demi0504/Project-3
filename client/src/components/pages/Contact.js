@@ -4,6 +4,7 @@ import OneImage from "../OneImage"
 import ThreeImage from "../ThreeImage"
 import ContactAlertModal from "../ContactAlertModal";
 import DogSVG from "../DogSVG/DogSVG"
+import MasonryGrid from "../MasonryGrid/MasonryGrid"
 import { Columns, Container } from 'react-bulma-components'
 
 class Contact extends Component {
@@ -50,6 +51,7 @@ class Contact extends Component {
     return (
       <div>
         <DogSVG />
+        <MasonryGrid />
         <section className="section">
           <Container>
             <Columns>

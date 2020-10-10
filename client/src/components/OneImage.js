@@ -23,7 +23,7 @@ class OneImage extends Component {
   render() {
     return (
       <div>
-        <img alt={this.state.result} src={this.state.result} />
+        <img alt={this.state.result} src={this.state.result} className="image-dog"/>
       </div>
     );
   }

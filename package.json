@@ -30,6 +30,7 @@
     "nodemailer": "^6.4.13",
     "react-anime": "^3.0.3",
     "react-bulma-components": "^3.4.0",
+    "react-masonry-css": "^1.0.14",
     "react-router-dom": "^5.2.0"
   }
 }
