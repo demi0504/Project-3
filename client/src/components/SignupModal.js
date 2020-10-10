@@ -4,7 +4,7 @@ import Input from "./Input";
 import Textarea from "./TextArea";
 
 
-const Modal = ({ closeModal, modalState }) => {
+const Modal = ({ closeModal }) => {
   
   
   const [facilities, setFacilities] = useState([])
@@ -97,13 +97,23 @@ const Modal = ({ closeModal, modalState }) => {
             <div className="columns">
               <div className="column">
                 <div className="control">
-                  <input className="input is-primary" type="text" placeholder="City" />
+                  <input className="input is-primary" 
+                          type="text" 
+                          placeholder="City"
+                          onChange={handleInputChange}
+                          name="city"
+                          value={formObject.city}
+                    />
                 </div>
               </div>
               <div className="column">
                 <div className="control">
                   <div className="select is-primary">
-                    <select>
+                    <select
+                      onChange={handleInputChange}
+                      name="state"
+                      value={formObject.state}
+                    >
                       <option>AL</option>
                       <option>AK</option>
                       <option>AR</option>
@@ -160,7 +170,13 @@ const Modal = ({ closeModal, modalState }) => {
               </div>
               <div className="column">
                 <div className="control">
-                    <input className="input is-primary" type="text" placeholder="Zip Code" />
+                    <input className="input is-primary"
+                           type="text" 
+                           placeholder="Zip Code"
+                           onChange={handleInputChange}
+                           name="zip"
+                           value={formObject.zip}
+                    />
                 </div>
               </div>
             </div>
@@ -268,7 +284,10 @@ const Modal = ({ closeModal, modalState }) => {
           </div>
         </section>
         <footer className="modal-card-foot">
-          <button className="button is-success">Submit</button>
+          <button className="button is-success"
+                  disabled={!(formObject.name && formObject.address && formObject.city && formObject.state && formObject.zip && formObject.phone)}
+                  onClick={handleFormSubmit}            
+          >Submit</button>
           <a className="button" onClick={closeModal}>Cancel</a>
         </footer>
       </div>
