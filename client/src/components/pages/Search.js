@@ -9,10 +9,20 @@ class Search extends Component {
     super(props);
     this.state = { 
        collapsed: true,
-       stateInput: "", 
+       stateInput: "",
+      //  businesses: "",
+      //  filteredBusinesses: ""
       };
     this.handleToggle = this.handleToggle.bind(this)
   }
+  // loadFacilities() {
+  //   API.getFacilities()
+  //     .then(res => 
+  //       {this.setState({ 
+  //         businesses: res.data.results,
+  //         filteredBusinesses: res.data.results })})
+  //     .catch(err => console.log(err));
+  // };
   handleToggle() {
     this.setState({ collapsed: !this.state.collapsed });
   }
@@ -24,6 +34,9 @@ class Search extends Component {
   }
   handleSearch = () => {
     API.getFacilityState(this.state.stateInput)
+    .then(res =>
+      {this.setState({ result: res.data.city })})
+    .catch(err => console.log(err));
   }
   
   render() {
@@ -162,8 +175,10 @@ class Search extends Component {
               <div className="select is-primary">
                 <select
                   name="city"
-                  
+                  onChange={this.handleChange}
+                  value={this.state.stateInput}
                 >
+                  <option></option>
                   <option>Austin</option>
                   <option>Chicago</option>
                   <option>Los Angeles</option>
@@ -174,7 +189,8 @@ class Search extends Component {
               </div>
             </div>
             <div class="control">
-                <a class="button is-info">
+                <a class="button is-info"
+                onClick={this.handleSearch} >
                   Search
                 </a>
               </div>
@@ -210,8 +226,9 @@ class Search extends Component {
                 </div>
             </div>
 
+            
+            
             <SearchContainer />
-
           </div>
         );
                 }
