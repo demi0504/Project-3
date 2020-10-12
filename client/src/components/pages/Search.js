@@ -70,6 +70,117 @@ class Search extends Component {
                 </div>  
               </div>
           <hr/>
+
+          <h1 className="column is-5 is-offset-1"><strong>Search by State</strong></h1>
+          <div className="column is-5 is-offset-1">
+                <div className="control mb-2">
+                  <div className="select is-primary">
+                    <select
+                      name="state"
+                      
+                    >
+                      <option>AL</option>
+                      <option>AK</option>
+                      <option>AR</option>
+                      <option>AZ</option>
+                      <option>CA</option>
+                      <option>CO</option>
+                      <option>CT</option>
+                      <option>DE</option>
+                      <option>FL</option>
+                      <option>GA</option>
+                      <option>HI</option>
+                      <option>IA</option>
+                      <option>ID</option>
+                      <option>IL</option>
+                      <option>IN</option>
+                      <option>KS</option>
+                      <option>KY</option>
+                      <option>LA</option>
+                      <option>MA</option>
+                      <option>MD</option>
+                      <option>ME</option>
+                      <option>MI</option>
+                      <option>MN</option>
+                      <option>MO</option>
+                      <option>MS</option>
+                      <option>MT</option>
+                      <option>NC</option>
+                      <option>ND</option>
+                      <option>NE</option>
+                      <option>NH</option>
+                      <option>NJ</option>
+                      <option>NM</option>
+                      <option>NV</option>
+                      <option>NY</option>
+                      <option>OH</option>
+                      <option>OK</option>
+                      <option>OR</option>
+                      <option>PA</option>
+                      <option>RI</option>
+                      <option>SC</option>
+                      <option>SD</option>
+                      <option>TN</option>
+                      <option>TX</option>
+                      <option>UT</option>
+                      <option>VA</option>
+                      <option>VT</option>
+                      <option>WA</option>
+                      <option>WI</option>
+                      <option>WV</option>
+                      <option>WY</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="control">
+                    <a class="button is-info">
+                      Search
+                    </a>
+                  </div>
+              </div>
+
+              <hr/>
+
+          <h1 className="column is-5 is-offset-1"><strong>Search by City</strong></h1>
+          <div className="column is-5 is-offset-1">
+            <div className="control mb-2">
+              <div className="select is-primary">
+                <select
+                  name="city"
+                  
+                >
+                  <option>Austin</option>
+                  <option>Chicago</option>
+                  <option>Los Angeles</option>
+                  <option>Nashville</option>
+                  <option>New York</option>
+                  <option>Seattle</option>
+                </select>
+              </div>
+            </div>
+            <div class="control">
+                <a class="button is-info">
+                  Search
+                </a>
+              </div>
+          </div>
+          <hr/>
+
+          <h1 className="column is-5 is-offset-1"><strong>Search By Zipcode</strong></h1>
+            <div className="column is-5 is-offset-1">
+              <div class="field has-addons">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Find a Boarder"/>
+                    </div>
+                  <div class="control">
+                    <a class="button is-info">
+                      Search
+                    </a>
+                  </div>
+                </div>
+            </div>
+
+          <hr/>
           <h1 className="column is-5 is-offset-1"><strong>Boarders in Nashville</strong></h1>
             <div className="column is-5 is-offset-1">
               <div class="field has-addons">
