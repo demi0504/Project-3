@@ -34,7 +34,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/airbob",
 //Lines 35-48 test if user model and password hashing are working
 // const User = require("./models/user");
 // const userInput = {
-//   name: "noobcoder1234",
+//   name: "Air Bob!1234",
 //   email: "Test@test",
 //   password: "1234567",
 //   role: "admin"
