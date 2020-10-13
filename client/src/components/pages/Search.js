@@ -10,19 +10,22 @@ class Search extends Component {
     this.state = { 
        collapsed: true,
        stateInput: "",
-      //  businesses: "",
-      //  filteredBusinesses: ""
+       businesses: [],
+       filteredBusinesses: []
       };
     this.handleToggle = this.handleToggle.bind(this)
   }
-  // loadFacilities() {
-  //   API.getFacilities()
-  //     .then(res => 
-  //       {this.setState({ 
-  //         businesses: res.data.results,
-  //         filteredBusinesses: res.data.results })})
-  //     .catch(err => console.log(err));
-  // };
+
+  componentDidMount() {
+    API.getFacilities()
+      .then(res => 
+        {console.log("Working!!" + JSON.stringify(res.data))
+          this.setState({ 
+          businesses: res.data,
+          filteredBusinesses: res.data })})
+      .catch(err => console.log(err));
+  };
+
   handleToggle() {
     this.setState({ collapsed: !this.state.collapsed });
   }
@@ -226,9 +229,19 @@ class Search extends Component {
                 </div>
             </div>
 
+          {this.state.businesses.map(biz => (
+          <SearchContainer
+            id={biz.id}
+            key={biz.id}
+            name={biz.profName}
+            address={biz.address}
+            city={biz.city}
+            zip={biz.zip}
+            phone={biz.phone}
+          />
+         ))}
             
             
-            <SearchContainer />
           </div>
         );
                 }
