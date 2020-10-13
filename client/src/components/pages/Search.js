@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Columns, Container } from 'react-bulma-components'
 import SearchContainer from "../SearchCard/SearchContainer"
 import API from "../../utils/API";
+import { Button } from "react-bulma-components";
+
+import { BrowserRouter as Link } from "react-router-dom";
 
 
 class Search extends Component {
@@ -243,6 +246,12 @@ class Search extends Component {
                   </div>
                 </div>
             </div>
+
+            {/* button to test out reso page,move to cards */}
+            <Link to={{ pathname: "/reserve" }}>
+              <Button className="is-dark is-medium">Make A Reservation
+              </Button>
+            </Link>
 
           {this.state.businesses.map(biz => (
           <SearchContainer

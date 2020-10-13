@@ -42,6 +42,14 @@ function NavTabs(props) {
           Sign Up
         </Link>
       </Navbar.Item>
+
+      {/* button to test out reso page,move to cards */}
+      <Navbar.Item>
+          
+      <Link to="/reserve" className={location.pathname === "/reserve" ? "nav-link active" : "nav-link"}>
+          reserve
+        </Link>
+      </Navbar.Item>
     </ Navbar>
   );
 }
