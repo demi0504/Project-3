@@ -19,12 +19,26 @@ class Search extends Component {
   componentDidMount() {
     API.getFacilities()
       .then(res => 
-        {console.log("Working!!" + JSON.stringify(res.data))
+        {//console.log("Working!!" + JSON.stringify(res.data))
           this.setState({ 
           businesses: res.data,
           filteredBusinesses: res.data })})
       .catch(err => console.log(err));
   };
+
+  cityFilter = city => {
+    // const filteredBiz = this.state.filteredBusinesses;
+    // if (this.state.zip === stateInput) {
+    //   return 
+    // }
+    const stateInput = this.state.stateInput;
+
+    const businesses = this.state.businesses.filter(biz => biz.city == city);
+    if (this.state.city === stateInput) {
+      this.setState({ businesses: businesses });
+      console.log(businesses)
+    }
+  }
 
   handleToggle() {
     this.setState({ collapsed: !this.state.collapsed });
@@ -180,6 +194,7 @@ class Search extends Component {
                   name="city"
                   onChange={this.handleChange}
                   value={this.state.stateInput}
+                  
                 >
                   <option></option>
                   <option>Austin</option>
@@ -193,7 +208,7 @@ class Search extends Component {
             </div>
             <div class="control">
                 <a class="button is-info"
-                onClick={this.handleSearch} >
+                onClick={this.handleSearch}>
                   Search
                 </a>
               </div>
@@ -231,6 +246,7 @@ class Search extends Component {
 
           {this.state.businesses.map(biz => (
           <SearchContainer
+            cityFilter={this.cityFilter}
             id={biz.id}
             key={biz.id}
             name={biz.profName}
