@@ -6,6 +6,7 @@ import SignUp from './components/pages/SignUp';
 import Contact from './components/pages/Contact';
 import NavTabs from './components/NavTabs';
 import Footer from './components/Footer';
+import Reservation from './components/Reservation';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/search" component={Search} />
         <Route path="/contact" component={Contact} />
+        <Route path="/reserve" component={Reservation} />
         <Footer />
       </div>
     </Router>
