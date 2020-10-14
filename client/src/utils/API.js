@@ -11,15 +11,15 @@ export default {
     },
 
     getFacilityCity: function(city) {
-        return axios.get("/api/facilities/" + city);
+        return axios.get("/api/facilities/city/" + city);
     },
 
     getFacilityState: function(state) {
-        return axios.get("/api/facilities/" + state);
+        return axios.get("/api/facilities/state/" + state);
     },
 
     getFacilityZip: function(zip) {
-        return axios.get("/api/facilities/" + zip);
+        return axios.get("/api/facilities/zip/" + zip);
     },
    
     deleteFacility: function(id) {
