@@ -8,6 +8,8 @@ router.use("/facilities", facilityRoutes);
 
 // User routes
 // router.use("/user", userRoutes);
+const userRouter = require("./User");
+router.use("/user", userRouter);
 
 //SendMail routes
 router.post("/api/contact-form", sendMailRoutes);

@@ -3,11 +3,12 @@ const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt")
 
 const userSchema = new Schema({
-  name: { type: String, required: true },
+  username: { type: String, required: true },
   email: { type: String, required: true },
   // owner: { type: Boolean, required: true },
   password: { type: String, required: true },
-  role: { type: String, enum: ["user", "admin"], required: true }
+  role: { type: String, enum: ["user", "admin"], required: true },
+  facilities : [{type : mongoose.Schema.Types.ObjectId, ref: 'Facility'}]
 });
 
 userSchema.pre("save", function(next) {
@@ -33,6 +34,6 @@ userSchema.methods.comparePassword = function(password, cb) {
   });
 }
 
-const User = mongoose.model("Contact", userSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;
