@@ -6,9 +6,16 @@ const reservationModel = require('../models/reservation');
 
 
 module.exports = {
-  create : function(req, res) {
-    db.Reservation.create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  }
-};
+  create: (dateStart, dateEnd) => new Promise((resolve, reject) => {
+    module.exports.validate(dateStart, dateEnd)
+        .then(() => {
+          
+        //Create and save post object
+          const mReservation = new reservationModel({ post: id, creator: result._id, dateStart, dateEnd });
+          mReservation.save();
+        })
+        .catch(error => {
+            reject(new Error(error))
+          });
+      })
+}
