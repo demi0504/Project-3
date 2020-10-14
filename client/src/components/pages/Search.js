@@ -12,7 +12,7 @@ class Search extends Component {
     super(props);
     this.state = { 
        collapsed: true,
-       stateInput: [],
+       stateInput: "",
        businesses: [],
        filteredBusinesses: []
       };
@@ -62,10 +62,37 @@ class Search extends Component {
   render() {
     return (
       <div className="container">
+        <p className="column is-5 is-offset-1 thick"><strong>Bring out ye dogs</strong></p>
+            <div className="section">
+              <Container>
+                <Columns>
+                  <Columns.Column className="is-5">
+                    <h1>What are the dates of your stay?</h1>
+                    <Columns>
+                      <Columns.Column>
+                        <div class="field">
+                          <label className="label" for="start">Check In</label>
+                          <input type="date" id="start" name="trip-start" value="2020-10-01" min="2020-01-01" max="2021-12-31"/>
+                        </div>
+                      </Columns.Column>
+                      <Columns.Column>
+                        <div class="field">
+                          <label className="label" for="start">Check Out</label>
+                          <input type="date" id="start" name="trip-start" value="2020-10-01" min="2020-01-01" max="2021-12-31"/>
+                        </div>
+                      </Columns.Column>
+                    </Columns>
+                  </Columns.Column>
+                </Columns>
+              </Container>
+            </div>
+          
+          
             <h1 className="column is-5 is-offset-1"><strong>How many dogs need boarding</strong></h1>
               <br/>
                 <div className="column is-5 is-offset-1">  
-                  <div className="select is-rounded">
+                  <input className="input" type="text" onChange={this.handleChange} value={this.state.stateInput}/>
+                  {/* <div className="select is-rounded">
                     <select>
                       <option>0</option>
                       <option>1</option>
@@ -74,7 +101,7 @@ class Search extends Component {
                       <option>4</option>
                       <option>5</option>
                     </select>
-                  </div>
+                  </div> */}
                 </div>
             <h1 className="column is-5 is-offset-1"><strong>Does your dog require grooming services?</strong></h1>
             <br/>
@@ -100,13 +127,56 @@ class Search extends Component {
                       name="state"
                       
                     >
-                      
+                      <option>AL</option>
+                      <option>AK</option>
+                      <option>AR</option>
+                      <option>AZ</option>
                       <option>CA</option>
+                      <option>CO</option>
+                      <option>CT</option>
+                      <option>DE</option>
+                      <option>FL</option>
+                      <option>GA</option>
+                      <option>HI</option>
+                      <option>IA</option>
+                      <option>ID</option>
                       <option>IL</option>
+                      <option>IN</option>
+                      <option>KS</option>
+                      <option>KY</option>
+                      <option>LA</option>
+                      <option>MA</option>
+                      <option>MD</option>
+                      <option>ME</option>
+                      <option>MI</option>
+                      <option>MN</option>
+                      <option>MO</option>
+                      <option>MS</option>
+                      <option>MT</option>
+                      <option>NC</option>
+                      <option>ND</option>
+                      <option>NE</option>
+                      <option>NH</option>
+                      <option>NJ</option>
+                      <option>NM</option>
+                      <option>NV</option>
                       <option>NY</option>
+                      <option>OH</option>
+                      <option>OK</option>
+                      <option>OR</option>
+                      <option>PA</option>
+                      <option>RI</option>
+                      <option>SC</option>
+                      <option>SD</option>
                       <option>TN</option>
                       <option>TX</option>
+                      <option>UT</option>
+                      <option>VA</option>
+                      <option>VT</option>
                       <option>WA</option>
+                      <option>WI</option>
+                      <option>WV</option>
+                      <option>WY</option>
                     </select>
                   </div>
                 </div>
@@ -146,6 +216,21 @@ class Search extends Component {
                 </a>
               </div>
           </div>
+          <hr/>
+
+          <h1 className="column is-5 is-offset-1"><strong>Search By Zipcode</strong></h1>
+            <div className="column is-5 is-offset-1">
+              <div class="field has-addons">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Find a Boarder"/>
+                    </div>
+                  <div class="control">
+                    <a class="button is-info">
+                      Search
+                    </a>
+                  </div>
+                </div>
+            </div>
 
           <hr/>
           <h1 className="column is-5 is-offset-1"><strong>Boarders in Nashville</strong></h1>
@@ -173,8 +258,7 @@ class Search extends Component {
             cityFilter={this.cityFilter}
             id={biz.id}
             key={biz.id}
-            name={biz.name}
-            state={biz.state}
+            name={biz.profName}
             address={biz.address}
             city={biz.city}
             zip={biz.zip}
