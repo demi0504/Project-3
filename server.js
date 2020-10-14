@@ -6,6 +6,7 @@ const app = express();
 const cors = require('cors');
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3001;
+const passport = require("passport");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +21,10 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
+// const userRouter = require("./routes/User");
+// app.use("/user", userRouter);
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/airbob",

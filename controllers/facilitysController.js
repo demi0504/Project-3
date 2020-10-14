@@ -17,19 +17,19 @@ module.exports = {
   },
   findByCity: function(req, res) {
     db.Facility
-      .findByCity(req.params.city)
+      .find({ city: req.params.city })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByState: function(req, res) {
     db.Facility
-      .findByState(req.params.state)
+      .find({ state: req.params.state })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByZipCode: function(req, res) {
     db.Facility
-      .findByZipCode(req.params.zipcode)
+      .find({ zip: req.params.zip })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

@@ -14,20 +14,20 @@ router
   .put(facilityController.update)
   .delete(facilityController.remove);
 
-// Matches with "/api/facilities/:city"
+// Matches with "/api/facilities/city/:city"
 router
-  .route("/:city")
+  .route("/city/:city")
   .get(facilityController.findByCity);
 
-// Matches with "/api/facilities/:state"
+// Matches with "/api/facilities/state/:state"
 router
-  .route("/:state")
+  .route("/state/:state")
   .get(facilityController.findByState);
 
-// Matches with "/api/facilities/:zipcode"
+// Matches with "/api/facilities/zip/:zip"
 
 router
-  .route("/:zipcode")
+  .route("/zip/:zip")
   .get(facilityController.findByZipCode);
 
 
