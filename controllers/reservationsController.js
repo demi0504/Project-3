@@ -1,11 +1,14 @@
+const router = require("express").Router();
 const userModel = require('../models/user');
 const facilityModel = require('../models/facility');
+const db = require("../models");
 const reservationModel = require('../models/reservation');
 
 
 module.exports = {
-  create : (dateStart, dateEnd) => PromiseRejectionEvent((resolve, reject) => {
-		const mReservation = new reservationModel({ post: id, creator: result._id, dateStart, dateEnd });
-    mReservation.save();
-  })
-}
+  create : function(req, res) {
+    db.Reservation.create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  }
+};
