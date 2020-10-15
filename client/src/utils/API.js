@@ -28,5 +28,9 @@ export default {
     
     saveFacility: function(facilityData) {
       return axios.post("/api/facilities", facilityData);
+    },
+
+    createReservation: function(reservationData) {
+      return axios.post("/api/reservation/create", reservationData);
     }
   };

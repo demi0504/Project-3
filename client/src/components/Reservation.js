@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Columns, Container } from 'react-bulma-components'
 import { Button } from "react-bulma-components";
 import Calendar from 'react-calendar';
+import API from "../utils/API";
 import Axios from 'axios';
 import 'react-calendar/dist/Calendar.css';
 
@@ -24,7 +25,7 @@ class Reservation extends Component {
 }
 
   handleReservation(event) {
-    Axios.post('http://127.0.0.1:3001/api/reservation/create', null,
+    API.createReservation(
       {
         params: {
           dateStart: this.state.date[0],

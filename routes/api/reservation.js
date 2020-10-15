@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const reservationFunc = require("../../controllers/reservationsController");
+const reservationModel = require('../../models/reservation');
+const reservationController = require("../../controllers/reservationsController");
 
-router.route('/api/reservation/create').post(function (req, res) {
+router.route('/create').post(function (req, res) {
     const { dateStart, dateEnd } = req.query;
 
-    reservationFunc.create(dateStart, dateEnd)
+    reservationController.create(dateStart, dateEnd)
         .then(result => {
             res.json(result);
         })
@@ -13,5 +14,4 @@ router.route('/api/reservation/create').post(function (req, res) {
             res.json(403, error);
         })
 });
-
 module.exports = router;
