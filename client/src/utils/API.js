@@ -30,7 +30,7 @@ export default {
       return axios.post("/api/facilities", facilityData);
     },
 
-    createReservation: function(reservationData) {
-      return axios.post("/api/reservation/create", reservationData);
+    createReservation: function(dateStart, dateEnd) {
+      return axios.post("/api/reservation/create", dateStart, dateEnd);
     }
   };
