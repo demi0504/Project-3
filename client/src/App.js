@@ -1,5 +1,4 @@
-import React, {useContext} from 'react';
-import { AuthContext } from "./Context/AuthContext"
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Search from './components/pages/Search';
 import Home from './components/pages/Home';
@@ -8,12 +7,11 @@ import Contact from './components/pages/Contact';
 import NavTabs from './components/NavTabs';
 import Footer from './components/Footer';
 import Reservation from './components/Reservation';
+import Login from './components/Login';
+import Register from './components/Register';
 
 
 function App() {
-  const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
-  console.log(user);
-  console.log(isAuthenticated);
 
   return (
     <Router>
@@ -24,6 +22,8 @@ function App() {
         <Route exact path="/search" component={Search} />
         <Route path="/contact" component={Contact} />
         <Route path="/reserve" component={Reservation} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         <Footer />
       </div>
     </Router>

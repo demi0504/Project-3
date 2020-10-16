@@ -21,10 +21,6 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
-// const userRouter = require("./routes/User");
-// app.use("/user", userRouter);
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/airbob",
@@ -35,22 +31,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/airbob",
   useFindAndModify: false
 }
 );
-
-//Lines 35-48 test if user model and password hashing are working
-// const User = require("./models/user");
-// const userInput = {
-//   name: "Air Bob!1234",
-//   email: "Test@test",
-//   password: "1234567",
-//   role: "admin"
-// }
-
-// const user = new User(userInput);
-// user.save((err, document) => {
-//   if(err)
-//     console.log(err);
-//   console.log(document);
-// })
 
 // Start the API server
 app.listen(PORT, function() {

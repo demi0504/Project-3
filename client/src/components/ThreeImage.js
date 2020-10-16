@@ -23,13 +23,13 @@ class ThreeImage extends Component {
       <div>
         <ul>
           <li>
-            <img alt={this.state.result[0]} src={this.state.result[0]} className="style"/>
+            <img alt={this.state.result[0]} src={this.state.result[0]} className="image-dog"/>
           </li>
           <li>
-            <img alt={this.state.result[1]} src={this.state.result[1]} className="style"/>
+            <img alt={this.state.result[1]} src={this.state.result[1]} className="image-dog"/>
           </li>
           <li>
-            <img alt={this.state.result[2]} src={this.state.result[2]} className="style"/>
+            <img alt={this.state.result[2]} src={this.state.result[2]} className="image-dog"/>
           </li>
         </ul>
       </div>
