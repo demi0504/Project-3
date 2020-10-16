@@ -112,8 +112,8 @@ class Search extends Component {
                     </select>
                   </div>
                 </div>
-                <div class="control">
-                    <button class="button is-info" 
+                <div className="control">
+                    <button className="button is-info" 
                     onClick={this.handleSearchByState}>
                       Search
                     </button>
@@ -143,7 +143,7 @@ class Search extends Component {
               </div>
             </div>
             <div class="control">
-                <button class="button is-info"
+                <button className="button is-info"
                 onClick={this.handleSearchByCity}>
                   Search
                 </button>
