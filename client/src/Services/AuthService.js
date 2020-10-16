@@ -29,7 +29,7 @@ export default{
     },
 
     logout : () => {
-        return fetch("user/logout")
+        return fetch("/user/logout")
                 .then(res => res.json())
                 .then(data => data);
     },
@@ -37,7 +37,7 @@ export default{
     //isAuthenticated helps to sync front end and back end so that if react app is closed
     //the user will stay logged in when they return
     isAuthenticated : () => {
-        return fetch("user/authenticated")
+        return fetch("/user/authenticated")
                 .then(res => {
                     if (res.status !== 401)
                         return res.json().then(data => data);

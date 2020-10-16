@@ -9,6 +9,7 @@ import NavTabs from './components/NavTabs';
 import Footer from './components/Footer';
 import Reservation from './components/Reservation';
 import Login from './components/Login';
+import Register from './components/Register';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/reserve" component={Reservation} />
         <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         <Footer />
       </div>
     </Router>

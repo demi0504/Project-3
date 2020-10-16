@@ -1,34 +1,41 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import AuthService from "../Services/AuthService";
 import Message from "../components/Message";
-import {AuthContext} from "../Context/AuthContext";
 import { Button } from "react-bulma-components";
 
-const Login = props => {
-    const [user, setUser] = useState({ username: "", password: ""});
+const Register = props => {
+    const [user, setUser] = useState({ username: "", password: "", role: ""});
     //null to signify not to render component
     const [message, setMessage] = useState(null);
-    const authContext = useContext(AuthContext);
+    let timerID = useRef(null);
+
+    useEffect(() => {
+        return () => {
+            clearTimeout(timerID);
+        }
+    }, []);
 
     const onChange = e => {
         setUser({...user, [e.target.name] : e.target.value });
         console.log(user);
     }
 
+    const resetForm = () => {
+        setUser({ username: "", password: "", role: ""})
+    }
+
     const onSubmit = e => {
         e.preventDefault();
-        AuthService.login(user).then(data => {
-            console.log(data);
-            const { isAuthenticated, user, message } = data;
-            if (isAuthenticated) {
-                //passes updated user
-                authContext.setUser(user);
-                authContext.setIsAuthenticated(isAuthenticated);
-                //history comes from react router and has a function called push
-                props.history.push("/");
+        AuthService.register(user).then(data => {
+            const { message } = data;
+            //show message to user
+            setMessage(message);
+            resetForm();
+            if (!message.msgError) {
+                timerID = setTimeout(() => {
+                    props.history.push("/login");
+                }, 2000)
             }
-            else
-                setMessage(message);
         });
     }
 
@@ -36,7 +43,7 @@ const Login = props => {
 
         <div>
             <form onSubmit={onSubmit}>
-                <h3>Please sign in</h3>
+                <h3>Please Register</h3>
                 <label htmlFor="username" classname="sr-only"> Username: </label>
                 <input type="text" 
                        name="username" 
@@ -50,9 +57,17 @@ const Login = props => {
                        onChange={onChange}
                        className="form-control"
                        placeholder="Enter Password" />
+
+                <label htmlFor="role" classname="sr-only"> Role: </label>
+                <input type="text"
+                       name="role"
+                       onChange={onChange}
+                       className="form-control"
+                       placeholder="Enter Role (admin/user)" />
+
                 <Button 
                     className="is-dark is-medium"
-                    type="submit"> Log In
+                    type="submit"> Register
                 </Button>
 
             </form>
@@ -64,4 +79,4 @@ const Login = props => {
     )
 }
 
-export default Login;
+export default Register;
