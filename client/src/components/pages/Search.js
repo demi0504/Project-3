@@ -112,8 +112,8 @@ class Search extends Component {
                     </select>
                   </div>
                 </div>
-                <div class="control">
-                    <button class="button is-info" 
+                <div className="control">
+                    <button className="button is-info" 
                     onClick={this.handleSearchByState}>
                       Search
                     </button>
@@ -143,7 +143,7 @@ class Search extends Component {
               </div>
             </div>
             <div class="control">
-                <button class="button is-info"
+                <button className="button is-info"
                 onClick={this.handleSearchByCity}>
                   Search
                 </button>
@@ -155,7 +155,7 @@ class Search extends Component {
           <h1 className="column is-5 is-offset-1"><strong>Boarders in Nashville</strong></h1>
             <div className="column is-5 is-offset-1">
               <div className="field has-addons">
-                <div class="control">
+                <div className="control">
                   <input className="input" type="text" placeholder="Find a Boarder"/>
                     </div>
                   <div class="control">
