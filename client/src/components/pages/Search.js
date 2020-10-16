@@ -14,7 +14,8 @@ class Search extends Component {
        collapsed: true,
        stateInput: [],
        businesses: [],
-       filteredBusinesses: []
+       filteredBusinesses: [],
+       hasGrooming: ""
       };
     this.handleToggle = this.handleToggle.bind(this)
   }
@@ -73,19 +74,47 @@ class Search extends Component {
     .catch(err => console.log(err));
   }
   
+  handleGroomingChange = (event) => {
+      let groomingBusinesses;
+      this.setState({
+      hasGrooming: event.target.value
+    })
+
+    if(event.target.value === "groom"){
+     groomingBusinesses = this.state.filteredBusinesses.filter(function(business){
+        return business.hasOwnProperty("groomingServices")
+      })
+    }
+
+    if(event.target.value === "nogroom"){
+      groomingBusinesses = this.state.filteredBusinesses.filter(function(business){
+         return !business.hasOwnProperty("groomingServices")
+       })
+     }
+    
+     
+    this.setBusinesses(groomingBusinesses)
+  }
+
+  setBusinesses = (filteredBusinesses) => {
+    this.setState({
+      businesses: filteredBusinesses
+    })
+  }
+
   render() {
     return (
       <div className="container">
-            <h1 className="column is-5 is-offset-1"><strong>Does your dog require grooming services?</strong></h1>
+          <h1 className="column is-5 is-offset-1"><strong>Does your dog require grooming services?</strong></h1>
             <br/>
               <div className="column is-5 is-offset-1">
                 <div className="control">
                   <label className="radio">
-                    <input type="radio" name="answer"/>
+                    <input type="radio" name="answer" value="groom" checked={this.state.hasGrooming === "groom"} onChange={this.handleGroomingChange}/>
                     Yes
                   </label>
                   <label className="radio">
-                    <input type="radio" name="answer"/>
+                    <input type="radio" name="answer" value="nogroom" checked={this.state.hasGrooming === "nogroom"} onChange={this.handleGroomingChange}/>
                     No
                   </label>
                 </div>  
@@ -93,31 +122,31 @@ class Search extends Component {
           <hr/>
 
           <h1 className="column is-5 is-offset-1"><strong>Search by State</strong></h1>
-          <div className="column is-5 is-offset-1">
-                <div className="control mb-2">
-                  <div className="select is-primary">
-                    <select
-                      name="state"
-                      onChange={this.handleChangeByState}
-                      value={this.state.stateInput}
-                    >
-                    <option></option>
-                    <option>CA</option>
-                    <option>IL</option>
-                    <option>NY</option>
-                    <option>TN</option>
-                    <option>TX</option>
-                    <option>WA</option>
-                    </select>
+            <div className="column is-5 is-offset-1">
+                  <div className="control mb-2">
+                    <div className="select is-primary">
+                      <select
+                        name="state"
+                        onChange={this.handleChangeByState}
+                        value={this.state.stateInput}
+                      >
+                      <option></option>
+                      <option>CA</option>
+                      <option>IL</option>
+                      <option>NY</option>
+                      <option>TN</option>
+                      <option>TX</option>
+                      <option>WA</option>
+                      </select>
+                    </div>
                   </div>
+                  <div className="control">
+                      <button className="button is-info" 
+                      onClick={this.handleSearchByState}>
+                        Search
+                      </button>
+                    </div>
                 </div>
-                <div className="control">
-                    <button className="button is-info" 
-                    onClick={this.handleSearchByState}>
-                      Search
-                    </button>
-                  </div>
-              </div>
 
               <hr/>
 
