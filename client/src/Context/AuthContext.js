@@ -25,10 +25,11 @@ export default ({ children }) => {
     //value prop is what we want available as global state
     return (
         <div>
-            {!isLoaded ? <h1>Loading</h1> : 
-            <AuthContext.Provider vaule={{user, setUser, isAuthenticated, setIsAuthenticated}} >
+            
+            <AuthContext.Provider value={{user, setUser, isAuthenticated, setIsAuthenticated}} >
                 { children }
-            </AuthContext.Provider>}
+            </AuthContext.Provider>
+            
         </div>
     )
 

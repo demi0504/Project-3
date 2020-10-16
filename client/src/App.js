@@ -11,9 +11,9 @@ import Reservation from './components/Reservation';
 
 
 function App() {
-  // const { user, serUser, isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
-  // console.log(user);
-  // console.log(isAuthenticated);
+  const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
+  console.log(user);
+  console.log(isAuthenticated);
 
   return (
     <Router>
