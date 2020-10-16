@@ -151,7 +151,6 @@ class Search extends Component {
           </div>
           <hr/>
 
-<<<<<<< HEAD
           <hr/>
           <h1 className="column is-5 is-offset-1"><strong>Boarders in Nashville</strong></h1>
             <div className="column is-5 is-offset-1">
@@ -166,13 +165,6 @@ class Search extends Component {
                   </div>
                 </div>
             </div>
-=======
-            {/* button to test out reso page,move to cards */}
-            <Link to={{ pathname: "/reserve" }}>
-              <Button className="is-dark is-medium">Make A Reservation
-              </Button>
-            </Link>
->>>>>>> master
 
           {this.state.businesses.map(biz => (
           <SearchContainer
