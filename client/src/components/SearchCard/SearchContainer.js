@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "react-bulma-components";
 
 
 function SearchContainer(props) {
@@ -8,8 +10,6 @@ function SearchContainer(props) {
     return (
 
       <div>
-    
-
         <div className="card">
           <div className="column is-12">
             <div className="media-content">
@@ -25,7 +25,10 @@ function SearchContainer(props) {
             <div className="content">
               {props.about}
             </div>
-            <button className="button is-light">More Info</button>
+            <button className="button is-light is-medium">More Info</button>
+            <Link to={{ pathname: "/reserve" }}>
+              <Button className="is-dark is-medium reso-btn">Reserve</Button>
+            </Link>
           </div>
         </div>
       </div>
