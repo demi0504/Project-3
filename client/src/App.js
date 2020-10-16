@@ -8,6 +8,7 @@ import Contact from './components/pages/Contact';
 import NavTabs from './components/NavTabs';
 import Footer from './components/Footer';
 import Reservation from './components/Reservation';
+import Login from './components/Login';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/search" component={Search} />
         <Route path="/contact" component={Contact} />
         <Route path="/reserve" component={Reservation} />
+        <Route path="/login" component={Login} />
         <Footer />
       </div>
     </Router>
