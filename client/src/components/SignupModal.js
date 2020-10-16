@@ -7,7 +7,7 @@ import Textarea from "./TextArea";
 const Modal = ({ closeModal }) => {
   
   
-  const [facilities, setFacilities] = useState([])
+  
   const [formObject, setFormObject] = useState({
     name: "",
     address: "",

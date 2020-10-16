@@ -1,35 +1,14 @@
-import React, { Component } from "react";
-import SearchCard from "./SearchCard";
-import API from "../../utils/API";
+import React from "react";
+
 
 function SearchContainer(props) {
-  // state = {
-  //   businesses: "",
-  //   filteredBusinesses: ""
-  // };
-
-  // componentDidMount() {
-  //   API.getFacilities()
-  //     .then(res => 
-  //       {console.log("Working!!" + res.data)
-  //         this.setState({ 
-  //         businesses: res.data,
-  //         filteredBusinesses: res.data })})
-          
-  //     .catch(err => console.log(err));
-  // };
 
 
   
     return (
 
       <div>
-            {/* {this.state.businesses.map(biz => (
-          <SearchCard
-            id={biz.id}
-            key={biz.id}
-          />
-         ))} */}
+    
 
         <div className="card">
           <div className="column is-12">

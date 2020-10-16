@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Columns, Container } from 'react-bulma-components'
+
 import SearchContainer from "../SearchCard/SearchContainer"
 import API from "../../utils/API";
 import { Button } from "react-bulma-components";
@@ -105,6 +105,7 @@ class Search extends Component {
                     <option>CA</option>
                     <option>IL</option>
                     <option>NY</option>
+                    <option>OH</option>
                     <option>TN</option>
                     <option>TX</option>
                     <option>WA</option>
@@ -112,10 +113,10 @@ class Search extends Component {
                   </div>
                 </div>
                 <div class="control">
-                    <a class="button is-info" 
+                    <button class="button is-info" 
                     onClick={this.handleSearchByState}>
                       Search
-                    </a>
+                    </button>
                   </div>
               </div>
 
@@ -142,10 +143,10 @@ class Search extends Component {
               </div>
             </div>
             <div class="control">
-                <a class="button is-info"
+                <button class="button is-info"
                 onClick={this.handleSearchByCity}>
                   Search
-                </a>
+                </button>
               </div>
           </div>
           <hr/>
@@ -158,9 +159,9 @@ class Search extends Component {
                   <input class="input" type="text" placeholder="Find a Boarder"/>
                     </div>
                   <div class="control">
-                    <a onClick={this.handleSearch} class="button is-info">
+                    <button onClick={this.handleSearch} class="button is-info">
                       Search
-                    </a>
+                    </button>
                   </div>
                 </div>
             </div>
@@ -176,9 +177,10 @@ class Search extends Component {
             cityFilter={this.cityFilter}
             id={biz.id}
             key={biz.id}
-            name={biz.profName}
+            name={biz.name}
             address={biz.address}
             city={biz.city}
+            state={biz.state}
             zip={biz.zip}
             phone={biz.phone}
           />
