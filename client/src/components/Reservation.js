@@ -27,10 +27,10 @@ class Reservation extends Component {
   handleReservation(event) {
     API.createReservation(
       {
-        params: {
+        
           dateStart: this.state.date[0],
           dateEnd: this.state.date[1]
-        }
+        
       })
       .then(res => {
         console.log(res)

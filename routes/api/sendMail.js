@@ -3,8 +3,9 @@ const nodemailer = require('nodemailer');
 
 
 // Nodemailer routes for contact form
-router.post('/api/contact-form', (req, res, next) => {
+router.post('/send', (req, res, next) => {
     nodemailer.createTestAccount((err, account) => {
+        console.log(req.body);
         const htmlEmail = `
         <h3>Contact Details</h3>
         <ul>

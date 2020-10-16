@@ -13,7 +13,7 @@ const userRouter = require("./User");
 router.use("/user", userRouter);
 
 //SendMail routes
-router.post("/api/contact-form", sendMailRoutes);
+router.use("/contact-form", sendMailRoutes);
 
 //Reservation routes
 router.use("/reservation", reservationRoutes);
