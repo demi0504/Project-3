@@ -36,7 +36,7 @@ class Search extends Component {
     // }
     const stateInput = this.state.stateInput;
 
-    const businesses = this.state.businesses.filter(biz => biz.city == city);
+    const businesses = this.state.businesses.filter(biz => biz.city === city);
     if (this.state.city === stateInput) {
       this.setState({ businesses: businesses });
       console.log(businesses)
@@ -112,8 +112,8 @@ class Search extends Component {
                     </select>
                   </div>
                 </div>
-                <div class="control">
-                    <button class="button is-info" 
+                <div className="control">
+                    <button className="button is-info" 
                     onClick={this.handleSearchByState}>
                       Search
                     </button>
@@ -143,7 +143,7 @@ class Search extends Component {
               </div>
             </div>
             <div class="control">
-                <button class="button is-info"
+                <button className="button is-info"
                 onClick={this.handleSearchByCity}>
                   Search
                 </button>
@@ -151,6 +151,7 @@ class Search extends Component {
           </div>
           <hr/>
 
+<<<<<<< HEAD
           <hr/>
           <h1 className="column is-5 is-offset-1"><strong>Boarders in Nashville</strong></h1>
             <div className="column is-5 is-offset-1">
@@ -165,6 +166,13 @@ class Search extends Component {
                   </div>
                 </div>
             </div>
+=======
+            {/* button to test out reso page,move to cards */}
+            <Link to={{ pathname: "/reserve" }}>
+              <Button className="is-dark is-medium">Make A Reservation
+              </Button>
+            </Link>
+>>>>>>> master
 
           {this.state.businesses.map(biz => (
           <SearchContainer

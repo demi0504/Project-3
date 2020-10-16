@@ -13,6 +13,7 @@ let facilitySeed = [
     profName: "Paw Patrol",
     address: "252 Bransford Avenue Nashville, TN 37204",
     city:"Nashville",
+    state: "TN",
     zip: 37204,
     phone: "(555) 555-5550",
     hours: [
@@ -175,6 +176,7 @@ let facilitySeed = [
     profName: "Spot Sleeper",
     address: "919 Gallatin Pike S Madison, TN 37115",
     city:"Nashville",
+    state: "TN",
     zip: 37115,
     phone: "(555) 555-5551",
     hours: [
@@ -313,6 +315,7 @@ let facilitySeed = [
     profName: "Where's Fido?",
     address: "2318 12th Avenue S Nashville, TN 37204",
     city:"Nashville",
+    state: "TN",
     zip: 37204,
     phone: "(555) 555-5552",
     hours: [
@@ -420,6 +423,7 @@ let facilitySeed = [
     profName: "Prissy Pooch",
     address: "4121 Hillsboro Pike Nashville, TN 37215",
     city:"Nashville",
+    state: "TN",
     zip: 37215,
     phone: "(555) 555-5553",
     hours: [
@@ -582,6 +586,7 @@ let facilitySeed = [
     profName: "Nashville Tail Blazers",
     address: "2407 DICKERSON PIKE NASHVILLE, TN, 37207",
     city:"Nashville",
+    state: "TN",
     zip: 37207,
     phone: "(615) 679-8444",
     hours: [
@@ -691,6 +696,7 @@ let facilitySeed = [
     profName: "South Paws",
     address: "1315 8th Avenue South 37203",
     city:"Nashville",
+    state: "TN",
     zip: 37203,
     phone: "(615) 736-5700",
     hours: [
@@ -763,6 +769,7 @@ let facilitySeed = [
     profName: "Pampered Pets",
     address: "149 Barker Road Nashville, TN 37214",
     city:"Nashville",
+    state: "TN",
     zip: 37214,
     phone: "(615) 889-1500",
     hours: [
@@ -856,6 +863,7 @@ let facilitySeed = [
     profName: "Camp Bow Wow",
     address: "470 Craighead Street Avenue Nashville, TN 37204",
     city:"Nashville",
+    state: "TN",
     zip: 37204,
     phone: "(615) 385-2275",
     hours: [
@@ -1018,6 +1026,7 @@ let facilitySeed = [
     profName: "The Belmont Pet Resort",
     address: "3206 Belmont Boulevard Nashville, TN 37212",
     city:"Nashville",
+    state: "TN",
     zip: 37212,
     phone: "(615) 292-7529",
     hours: [
@@ -1146,6 +1155,7 @@ let facilitySeed = [
     profName: "The Dog Spot",
     address: "5001 Alabama Ave. Nashville, TN 37209",
     city:"Nashville",
+    state: "TN",
     zip: 37209,
     phone: "(615) 334-0000",
     hours: [
@@ -1254,6 +1264,7 @@ let facilitySeed = [
     profName: "Peace Love and Paws",
     address: "1221 Brick Church Pike Nashville, Tennessee 37207",
     city:"Nashville",
+    state: "TN",
     zip: 37207,
     phone: "(615) 933-7297",
     hours: [
@@ -1340,6 +1351,7 @@ let facilitySeed = [
   profName: "Paradise Ranch Pet Resort",
   address: "10268 La Tuna Canyon Rd, Los Angeles, CA 91352",
   city:"Los Angeles",
+  state: "CA",
   zip: 91352,
   phone: "(818) 768-8708",
   hours: [
@@ -1502,6 +1514,7 @@ let facilitySeed = [
   profName: "Oh Hello Dog: DTLA Dog Daycare & Boarding",
   address: "1228 E 8th St, Los Angeles, CA 90021",
   city:"Los Angeles",
+  state: "CA",
   zip: 90021,
   phone: "(213) 265-7445",
   hours: [
@@ -1640,6 +1653,7 @@ let facilitySeed = [
   profName: "The Pupper Club - Dog Daycare, Dog Grooming, Dog Boarding",
   address: "603 S Los Angeles St, Los Angeles, CA 90014",
   city:"Los Angeles",
+  state: "CA",
   zip: 90014,
   phone: "(213) 310-8440",
   hours: [
@@ -1747,6 +1761,7 @@ let facilitySeed = [
   profName: "D Pet Hotels",
   address: "1041 N Highland Ave, Los Angeles, CA 90038",
   city:"Los Angeles",
+  state: "CA",
   zip: 90038,
   phone: "(323) 464-7387",
   hours: [
@@ -1909,6 +1924,7 @@ let facilitySeed = [
   profName: "CAGE FREE DOG BOARDING",
   address: "8218 Sunset Blvd, Los Angeles, CA 90046",
   city:"Los Angeles",
+  state: "CA",
   zip: 90046,
   phone: "(323) 529-3728",
   hours: [
@@ -2018,6 +2034,7 @@ let facilitySeed = [
   profName: "South Park Doggie DTLA",
   address: "1320 S Grand Ave, Los Angeles, CA 90015",
   city:"Los Angeles",
+  state: "CA",
   zip: 90015,
   phone: "(213) 747-3649",
   hours: [
@@ -2090,6 +2107,7 @@ let facilitySeed = [
   profName: "Dog Resort",
   address: "5203 Hollywood Blvd, Los Angeles, CA 90027",
   city:"Los Angeles",
+  state: "CA",
   zip: 90027,
   phone: "(323) 499-1414",
   hours: [
@@ -2183,6 +2201,7 @@ let facilitySeed = [
   profName: "Wag Hotels",
   address: "960 N Highland Ave, Los Angeles, CA 90038",
   city:"Los Angeles",
+  state: "CA",
   zip: 90038,
   phone: "(888) 924-5463",
   hours: [
@@ -2345,6 +2364,7 @@ let facilitySeed = [
   profName: "Puparazzi LA Dog Daycare And Boarding",
   address: "1933 Pontius Ave, Los Angeles, CA 90025",
   city:"Los Angeles",
+  state: "CA",
   zip: 90025,
   phone: "(424) 325-3151",
   hours: [
@@ -2473,6 +2493,7 @@ let facilitySeed = [
   profName: "Doggie Goddess Pet Services",
   address: "810 South La Brea Ave, Los Angeles, CA 90036",
   city:"Los Angeles",
+  state: "CA",
   zip: 90036,
   phone: "(323) 919-4798",
   hours: [
@@ -2581,6 +2602,7 @@ let facilitySeed = [
   profName: "Bone Sweet Bone - Arts District",
   address: "435 Molino St, Los Angeles, CA 90013",
   city:"Los Angeles",
+  state: "CA",
   zip: 90013,
   phone: "(213) 628-3982",
   hours: [
@@ -2667,6 +2689,7 @@ let facilitySeed = [
   profName: "Paws In Chelsea",
   address: "145 W 24th St #1, New York, NY 10011",
   city:"New York",
+  state: "NY",
   zip: 10011,
   phone: "(212) 645-7297",
   hours: [
@@ -2829,6 +2852,7 @@ let facilitySeed = [
   profName: "New York Dog Spa and Hotel",
   address: "32 W 25th St, New York, NY 10010",
   city:"New York",
+  state: "NY",
   zip: 10010,
   phone: "(212) 243-1199",
   hours: [
@@ -2967,6 +2991,7 @@ let facilitySeed = [
   profName: "NYC Pet Services",
   address: "31-21 31st St, Queens, NY 11106",
   city:"New York",
+  state: "NY",
   zip: 11106,
   phone: "(718) 350-1635",
   hours: [
@@ -3074,6 +3099,7 @@ let facilitySeed = [
   profName: "Camp Canine",
   address: "46 W 73rd St, New York, NY 10023",
   city:"New York",
+  state: "NY",
   zip: 10023,
   phone: "(212) 787-3647",
   hours: [
@@ -3236,6 +3262,7 @@ let facilitySeed = [
   profName: "Dogs Delight",
   address: "75 Wall St #75, New York, NY 10005",
   city:"New York",
+  state: "NY",
   zip: 10005,
   phone: "(646) 912-4133",
   hours: [
@@ -3345,6 +3372,7 @@ let facilitySeed = [
   profName: "Happy Dogs",
   address: "403 1st Avenue, New York, NY 10010",
   city:"New York",
+  state: "NY",
   zip: 10010,
   phone: "(212) 532-4220",
   hours: [
@@ -3417,6 +3445,7 @@ let facilitySeed = [
   profName: "Dog Days of New York",
   address: "2581 Broadway, New York, NY 10025",
   city:"New York",
+  state: "NY",
   zip: 10025,
   phone: "(212) 767-9022",
   hours: [
@@ -3510,6 +3539,7 @@ let facilitySeed = [
   profName: "Camp Ruff Ruff",
   address: "174 Sand Ln, Staten Island, NY 10305",
   city:"New York",
+  state: "NY",
   zip: 10305,
   phone: "(347) 844-2652",
   hours: [
@@ -3672,6 +3702,7 @@ let facilitySeed = [
   profName: "NYC PETCARE",
   address: "415 W 24th St, New York, NY 10011",
   city:"New York",
+  state: "NY",
   zip: 10011,
   phone: "(347) 248-0276",
   hours: [
@@ -3800,6 +3831,7 @@ let facilitySeed = [
   profName: "Celebrity Pets Hotel",
   address: "1740 Broadway 15th floor, New York, NY 10019",
   city:"New York",
+  state: "NY",
   zip: 10019,
   phone: "(646) 588-9817",
   hours: [
@@ -3908,6 +3940,7 @@ let facilitySeed = [
   profName: "My Pets Wellness",
   address: "104 W 27th St, New York, NY 10001",
   city:"New York",
+  state: "NY",
   zip: 10001,
   phone: "(646) 478-7877",
   hours: [
@@ -3994,6 +4027,7 @@ let facilitySeed = [
   profName: "VIP's Dog Hotel Day Care & Dog Boarding",
   address: "2926 W Lake St, Chicago, IL 60612",
   city:"Chicago",
+  state: "IL",
   zip: 60612,
   phone: "(312) 983-0555",
   hours: [
@@ -4156,6 +4190,7 @@ let facilitySeed = [
   profName: "Dog.",
   address: "1030 N Halsted St, Chicago, IL 60642",
   city:"Chicago",
+  state: "IL",
   zip: 60642,
   phone: "(312) 895-3777",
   hours: [
@@ -4294,6 +4329,7 @@ let facilitySeed = [
   profName: "Found Chicago",
   address: "4108 N Rockwell St, Chicago, IL 60618",
   city:"Chicago",
+  state: "IL",
   zip: 60618,
   phone: "(773) 539-3880",
   hours: [
@@ -4401,6 +4437,7 @@ let facilitySeed = [
   profName: "Stay. Modern Dog Hotel",
   address: "4130 N Rockwell St, Chicago, IL 60618",
   city:"Chicago",
+  state: "IL",
   zip: 60618,
   phone: "(773) 509-0001",
   hours: [
@@ -4563,6 +4600,7 @@ let facilitySeed = [
   profName: "Rockstar Pets",
   address: "2924 N Western Ave, Chicago, IL 60618",
   city:"Chicago",
+  state: "IL",
   zip: 60618,
   phone: "(773) 920-7625",
   hours: [
@@ -4672,6 +4710,7 @@ let facilitySeed = [
   profName: "Tucker Pup's Pet Resort",
   address: "219 N Carpenter St, Chicago, IL 60607",
   city:"Chicago",
+  state: "IL",
   zip: 60607,
   phone: "(312) 829-8787",
   hours: [
@@ -4744,6 +4783,7 @@ let facilitySeed = [
   profName: "Active! Dog Daycare and Boarding",
   address: "2550 W Diversey Ave, Chicago, IL 60647",
   city:"Chicago",
+  state: "IL",
   zip: 60647,
   phone: "(773) 278-7003",
   hours: [
@@ -4837,6 +4877,7 @@ let facilitySeed = [
   profName: "Pooch Hotel",
   address: "2228 N Clybourn Ave, Chicago, IL 60614",
   city:"Chicago",
+  state: "IL",
   zip: 60614,
   phone: "(773) 348-2646",
   hours: [
@@ -4999,6 +5040,7 @@ let facilitySeed = [
   profName: "DoGone Fun!",
   address: "1717 S State St, Chicago, IL 60616",
   city:"Chicago",
+  state: "IL",
   zip: 60616,
   phone: "(312) 765-9364",
   hours: [
@@ -5127,6 +5169,7 @@ let facilitySeed = [
   profName: "Chi-Town Dog House",
   address: "2231 W Belmont Ave, Chicago, IL 60618",
   city:"Chicago",
+  state: "IL",
   zip: 60618,
   phone: "(773) 348-9663",
   hours: [
@@ -5235,6 +5278,7 @@ let facilitySeed = [
   profName: "Canine Social Club",
   address: "5508 N Western Ave, Chicago, IL 60625",
   city:"Chicago",
+  state: "IL",
   zip: 60625,
   phone: "(773) 506-6200",
   hours: [
@@ -5321,6 +5365,7 @@ let facilitySeed = [
   profName: "Austin Dogtown Boarding & Daycare",
   address: "537 Woodward St, Austin, TX 78704",
   city:"Austin",
+  state: "TX",
   zip: 78704,
   phone: "(512) 535-4244",
   hours: [
@@ -5483,6 +5528,7 @@ let facilitySeed = [
   profName: "Austin Pup Culture",
   address: "606 Kenniston Dr, Austin, TX 78752",
   city:"Austin",
+  state: "TX",
   zip: 78752,
   phone: "(512) 524-0057",
   hours: [
@@ -5621,6 +5667,7 @@ let facilitySeed = [
   profName: "Chinatics",
   address: "4 Kern Ramble St, Austin, TX 78722",
   city:"Austin",
+  state: "TX",
   zip: 78722,
   phone: "(773) 539-3880",
   hours: [
@@ -5728,6 +5775,7 @@ let facilitySeed = [
   profName: "Bed and Biscuit",
   address: "6004 City Park Rd, Austin, TX 78730",
   city:"Austin",
+  state: "TX",
   zip: 78730,
   phone: "(512) 343-0723",
   hours: [
@@ -5890,6 +5938,7 @@ let facilitySeed = [
   profName: "Dogtopia",
   address: "13945 US-183 C-4, Austin, TX 78717",
   city:"Austin",
+  state: "TX",
   zip: 78717,
   phone: "(512) 333-1111",
   hours: [
@@ -5999,6 +6048,7 @@ let facilitySeed = [
   profName: "Austin Pet Ranch",
   address: "14425 Farm to Market Rd 1826, Austin, TX 78737",
   city:"Austin",
+  state: "TX",
   zip: 78737,
   phone: "(512) 301-2279",
   hours: [
@@ -6071,6 +6121,7 @@ let facilitySeed = [
   profName: "Barking Hound",
   address: "412 Josephine St, Austin, TX 78704",
   city:"Austin",
+  state: "TX",
   zip: 78704,
   phone: "(512) 477-3647",
   hours: [
@@ -6164,6 +6215,7 @@ let facilitySeed = [
   profName: "Taurus Academy",
   address: "6506 Burnet Rd, Austin, TX 78757",
   city:"Austin",
+  state: "TX",
   zip: 78757,
   phone: "(512) 961-6935",
   hours: [
@@ -6326,6 +6378,7 @@ let facilitySeed = [
   profName: "SOCO Pet Lounge",
   address: "4917 S Congress Ave, Austin, TX 78745",
   city:"Austin",
+  state: "TX",
   zip: 78745,
   phone: "(512) 416-7387",
   hours: [
@@ -6454,6 +6507,7 @@ let facilitySeed = [
   profName: "Midtown Groom & Board",
   address: "1207 Baylor St, Austin, TX 78703",
   city:"Austin",
+  state: "TX",
   zip: 78703,
   phone: "(512) 477-8079",
   hours: [
@@ -6562,6 +6616,7 @@ let facilitySeed = [
   profName: "Jackie's Play & Stay",
   address: "3822 Airport Blvd, Austin, TX 78722",
   city:"Austin",
+  state: "TX",
   zip: 78722,
   phone: "(512) 524-2525",
   hours: [
@@ -6648,6 +6703,7 @@ let facilitySeed = [
   profName: "Seattle Dog Boarding",
   address: "11715 Roosevelt Way NE, Seattle, WA 98125",
   city:"Seattle",
+  state: "WA",
   zip: 98125,
   phone: "(206) 551-0438",
   hours: [
@@ -6810,6 +6866,7 @@ let facilitySeed = [
   profName: "Good Dog Daycare & Boarding",
   address: "9064 Delridge Way SW, Seattle, WA 98106",
   city:"Seattle",
+  state: "WA",
   zip: 98106,
   phone: "(206) 932-7833",
   hours: [
@@ -6948,6 +7005,7 @@ let facilitySeed = [
   profName: "Seattle Canine Club",
   address: "2751 4th Ave S, Seattle, WA 98134",
   city:"Seattle",
+  state: "WA",
   zip: 98134,
   phone: "(206) 957-9097",
   hours: [
@@ -7055,6 +7113,7 @@ let facilitySeed = [
   profName: "Metro Dog",
   address: "3412 16th Ave W, Seattle, WA 98119",
   city:"Seattle",
+  state: "WA",
   zip: 98119,
   phone: "(206) 284-3647",
   hours: [
@@ -7217,6 +7276,7 @@ let facilitySeed = [
   profName: "DogCity",
   address: "4457 36th Ave SW, Seattle, WA 98126",
   city:"Seattle",
+  state: "WA",
   zip: 98126,
   phone: "(206) 420-1659",
   hours: [
@@ -7326,6 +7386,7 @@ let facilitySeed = [
   profName: "Tails of the City",
   address: "1621 12th Ave, Seattle, WA 98122",
   city:"Seattle",
+  state: "WA",
   zip: 98122,
   phone: "(206) 466-1052",
   hours: [
@@ -7398,6 +7459,7 @@ let facilitySeed = [
   profName: "Adorable Pet Lodge",
   address: "1043 S 140th St, Seattle, WA 98168",
   city:"Seattle",
+  state: "WA",
   zip: 98168,
   phone: "(206) 242-7480",
   hours: [
@@ -7491,6 +7553,7 @@ let facilitySeed = [
   profName: "Citydog! Club",
   address: "809 Olive Way, Seattle, WA 98101",
   city:"Seattle",
+  state: "WA",
   zip: 98101,
   phone: "(206) 623-5395",
   hours: [
@@ -7653,6 +7716,7 @@ let facilitySeed = [
   profName: "Central Bark",
   address: "838 Poplar Pl S, Seattle, WA 98144",
   city:"Seattle",
+  state: "WA",
   zip: 98144,
   phone: "(206) 325-3525",
   hours: [
@@ -7781,6 +7845,7 @@ let facilitySeed = [
   profName: "Camp Crockett Dog Day Camp",
   address: "5611 Delridge Way SW, Seattle, WA 98106",
   city:"Seattle",
+  state: "WA",
   zip: 98106,
   phone: "(206) 327-9301",
   hours: [
@@ -7889,6 +7954,7 @@ let facilitySeed = [
   profName: "House of Ruff",
   address: "2603 S Jackson St, Seattle, WA 98144",
   city:"Seattle",
+  state: "WA",
   zip: 98144,
   phone: "(206) 325-3476",
   hours: [
