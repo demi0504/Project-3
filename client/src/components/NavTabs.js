@@ -1,12 +1,90 @@
-import React from "react";
+import React, {useContext} from "react";
+import AuthService from "../Services/AuthService";
+import { AuthContext } from "../Context/AuthContext";
 import { Link, useLocation } from "react-router-dom";
 import { Navbar } from 'react-bulma-components';
+import { authenticate } from "passport";
+import { Button } from "react-bulma-components";
 
-function NavTabs(props) {
+const NavTabs = props => {
   const location = useLocation();
 
   // function toggleBurgerMenu() {
   //   document.querySelector('.navbar-menu').toggle('is-active');
+  // }
+  // const { isAuthenticated, setIsAuthenticated, user, setUser } = useContext(AuthContext);
+
+  // const onClickLogoutHandler = () => {
+  //   AuthService.logout().then(data => {
+  //     if (data.success) {
+  //       setUser(data.user);
+  //       setIsAuthenticated(false);
+  //     }
+  //   });
+  // }
+
+  // const unauthenticatedNavbar = () => {
+  //     return (
+  //       <>
+
+  //         <Navbar.Item>
+  //           <Link to="/login" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+  //             Login
+  //           </Link>
+  //         </Navbar.Item>
+  //         <Navbar.Item>
+  //           <Link to="/register" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+  //             Register
+  //           </Link>
+  //         </Navbar.Item>
+  //       </>
+  //     )
+  // }
+
+  // const authenticatedNavBar= () => {
+  //   return (
+  //     <>
+
+  //       <Navbar.Item>
+  //         <Link to="/search" className={location.pathname === "/search" ? "nav-link active" : "nav-link"}>
+  //           Search
+  //         </Link>
+  //       </Navbar.Item>
+  //       <Navbar.Item>
+  //         <Link to="/contact" className={location.pathname === "/contact" ? "nav-link active" : "nav-link"}>
+  //           Contact
+  //         </Link>
+  //       </Navbar.Item>
+  //       <Navbar.Item>
+  //         <Link to="/signup" className={location.pathname === "/signup" ? "nav-link active" : "nav-link"}>
+  //           Sign Up
+  //         </Link>
+  //       </Navbar.Item>
+
+  //       {/* button to test out reso page,move to cards */}
+  //       <Navbar.Item>
+  //         <Link to="/reserve" className={location.pathname === "/reserve" ? "nav-link active" : "nav-link"}>
+  //           reserve
+  //         </Link>
+  //       </Navbar.Item>
+        
+  //       {
+  //         user.role === "admin" ?
+  //         <Navbar.Item>
+  //           <Link to="/signup" className={location.pathname === "/signup" ? "nav-link active" : "nav-link"}>
+  //             Sign Up Admin
+  //           </Link>
+  //         </Navbar.Item>
+  //         : null
+  //       }
+  //       <Button 
+  //         className="is-dark is-medium nav-link active"
+  //         onClick={onClickLogoutHandler}>
+  //         Logout
+  //       </Button>
+
+  //     </>
+  //   )
   // }
 
   return (
@@ -27,6 +105,9 @@ function NavTabs(props) {
           Home
         </Link>
       </Navbar.Item>
+
+      {/* { !isAuthenticated ? unauthenticatedNavbar() : authenticatedNavBar() } */}
+
       <Navbar.Item>
         <Link to="/search" className={location.pathname === "/search" ? "nav-link active" : "nav-link"}>
           Search
@@ -42,6 +123,7 @@ function NavTabs(props) {
           Sign Up
         </Link>
       </Navbar.Item>
+
     </ Navbar>
   );
 }
