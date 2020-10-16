@@ -6,11 +6,6 @@ const JWT = require("jsonwebtoken");
 const User = require("../../models/user");
 const Facility = require("../../models/facility");
 
-
-// userRouter.get("/test", (req, res) => {
-//     res.send("Test name!!");
-// })
-
 const signToken = userID => {
     return JWT.sign({
         iss : "Air Bob",
@@ -78,13 +73,6 @@ userRouter.get("/facilities", passport.authenticate("jwt", {session : false}), (
         res.status(200).json({facilities : document.facilities, authenticated : true});
     });
 });
-
-// userRouter.get("/admin", passport.authenticate("jwt", {session : false}), (req, res) => {
-//     if (req.user.role === "admin"){
-//         res.status(200).json({message : {msgBody : "You are an admin", msgError: false}});
-//     } else (err) 
-//     res.status(403).json({message : {msgBody : "You're not an admin. Go away.", msgError: true}});
-// });
 
 userRouter.get('/admin',passport.authenticate('jwt',{session : false}),(req,res)=>{
     if(req.user.role === 'admin'){

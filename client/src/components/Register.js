@@ -4,7 +4,7 @@ import Message from "../components/Message";
 import { Button } from "react-bulma-components";
 
 const Register = props => {
-    const [user, setUser] = useState({ username: "", password: "", role: ""});
+    const [user, setUser] = useState({ username: "", password: "", email: "", role: ""});
     //null to signify not to render component
     const [message, setMessage] = useState(null);
     let timerID = useRef(null);
@@ -17,11 +17,10 @@ const Register = props => {
 
     const onChange = e => {
         setUser({...user, [e.target.name] : e.target.value });
-        console.log(user);
     }
 
     const resetForm = () => {
-        setUser({ username: "", password: "", role: ""})
+        setUser({ username: "", password: "", email: "", role: ""})
     }
 
     const onSubmit = e => {
@@ -57,6 +56,13 @@ const Register = props => {
                        onChange={onChange}
                        className="form-control"
                        placeholder="Enter Password" />
+
+                <label htmlFor="email" classname="sr-only"> Email: </label>
+                <input type="email"
+                       name="email"
+                       onChange={onChange}
+                       className="form-control"
+                       placeholder="Enter email address" />
 
                 <label htmlFor="role" classname="sr-only"> Role: </label>
                 <input type="text"

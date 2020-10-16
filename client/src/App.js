@@ -1,5 +1,4 @@
-import React, {useContext} from 'react';
-import { AuthContext } from "./Context/AuthContext"
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Search from './components/pages/Search';
 import Home from './components/pages/Home';
@@ -13,9 +12,6 @@ import Register from './components/Register';
 
 
 function App() {
-  const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
-  console.log(user);
-  console.log(isAuthenticated);
 
   return (
     <Router>
