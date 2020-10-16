@@ -7,7 +7,7 @@ import Textarea from "./TextArea";
 const Modal = ({ closeModal }) => {
   
   
-  const [facilities, setFacilities] = useState([])
+  
   const [formObject, setFormObject] = useState({
     name: "",
     address: "",
@@ -295,7 +295,7 @@ const Modal = ({ closeModal }) => {
                   disabled={!(formObject.name && formObject.address && formObject.city && formObject.state && formObject.zip && formObject.phone)}
                   onClick={handleFormSubmit}            
           >Submit</button>
-          <a className="button" onClick={closeModal}>Cancel</a>
+          <button className="button" onClick={closeModal}>Cancel</button>
         </footer>
       </div>
     </div>

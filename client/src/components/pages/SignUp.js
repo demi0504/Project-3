@@ -1,6 +1,5 @@
 import React from "react";
 import Modal from "../SignupModal";
-import OneImage from "../OneImage";
 import { Hero } from "react-bulma-components";
 import { Columns, Container } from 'react-bulma-components'
 import { Button } from "react-bulma-components";
@@ -66,7 +65,7 @@ class Signup extends React.Component {
             <Columns>
             <Columns.Column className="is-full">
               <div style={{textAlign: "center"}}>
-              <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074__340.jpg" />
+              <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074__340.jpg" alt="Dog"/>
               </div>
             </Columns.Column>
             </Columns>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Columns, Container } from 'react-bulma-components'
+
 import SearchContainer from "../SearchCard/SearchContainer"
 import API from "../../utils/API";
 import { Button } from "react-bulma-components";
@@ -36,7 +36,7 @@ class Search extends Component {
     // }
     const stateInput = this.state.stateInput;
 
-    const businesses = this.state.businesses.filter(biz => biz.city == city);
+    const businesses = this.state.businesses.filter(biz => biz.city === city);
     if (this.state.city === stateInput) {
       this.setState({ businesses: businesses });
       console.log(businesses)
@@ -105,17 +105,18 @@ class Search extends Component {
                     <option>CA</option>
                     <option>IL</option>
                     <option>NY</option>
+                    <option>OH</option>
                     <option>TN</option>
                     <option>TX</option>
                     <option>WA</option>
                     </select>
                   </div>
                 </div>
-                <div class="control">
-                    <a class="button is-info" 
+                <div className="control">
+                    <button className="button is-info" 
                     onClick={this.handleSearchByState}>
                       Search
-                    </a>
+                    </button>
                   </div>
               </div>
 
@@ -142,28 +143,13 @@ class Search extends Component {
               </div>
             </div>
             <div class="control">
-                <a class="button is-info"
+                <button className="button is-info"
                 onClick={this.handleSearchByCity}>
                   Search
-                </a>
+                </button>
               </div>
           </div>
           <hr/>
-
-          <hr/>
-          <h1 className="column is-5 is-offset-1"><strong>Boarders in Nashville</strong></h1>
-            <div className="column is-5 is-offset-1">
-              <div class="field has-addons">
-                <div class="control">
-                  <input class="input" type="text" placeholder="Find a Boarder"/>
-                    </div>
-                  <div class="control">
-                    <a onClick={this.handleSearch} class="button is-info">
-                      Search
-                    </a>
-                  </div>
-                </div>
-            </div>
 
             {/* button to test out reso page,move to cards */}
             <Link to={{ pathname: "/reserve" }}>
@@ -171,14 +157,16 @@ class Search extends Component {
               </Button>
             </Link>
 
+
           {this.state.businesses.map(biz => (
           <SearchContainer
             cityFilter={this.cityFilter}
             id={biz.id}
             key={biz.id}
-            name={biz.profName}
+            name={biz.name}
             address={biz.address}
             city={biz.city}
+            state={biz.state}
             zip={biz.zip}
             phone={biz.phone}
           />

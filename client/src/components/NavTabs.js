@@ -91,7 +91,7 @@ const NavTabs = props => {
     <Navbar className="is-light is-spaced nav-tabs">
       <Navbar.Brand>
         <Navbar.Item>
-        <i class="fas fa-paw"></i>
+        <i className="fas fa-paw"></i>
         </Navbar.Item>
       </Navbar.Brand>
       {/* <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic"
@@ -121,14 +121,6 @@ const NavTabs = props => {
       <Navbar.Item>
         <Link to="/signup" className={location.pathname === "/signup" ? "nav-link active" : "nav-link"}>
           Sign Up
-        </Link>
-      </Navbar.Item>
-
-      {/* button to test out reso page,move to cards */}
-      <Navbar.Item>
-          
-      <Link to="/reserve" className={location.pathname === "/reserve" ? "nav-link active" : "nav-link"}>
-          reserve
         </Link>
       </Navbar.Item>
 

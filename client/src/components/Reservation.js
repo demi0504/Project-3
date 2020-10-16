@@ -15,22 +15,15 @@ class Reservation extends Component {
   }
 
   onChange = date => {
-    
-
-        console.log(date)
-        this.setState({ date })
-
-
-
+    console.log(date)
+    this.setState({ date })
 }
 
   handleReservation(event) {
     API.createReservation(
       {
-        params: {
-          dateStart: this.state.date[0],
-          dateEnd: this.state.date[1]
-        }
+        dateStart: this.state.date[0],
+        dateEnd: this.state.date[1]
       })
       .then(res => {
         console.log(res)
@@ -41,18 +34,30 @@ class Reservation extends Component {
     })
   }
 
-    render() {
-        return (
-          <div>
-            <Calendar
-            onChange={this.onChange}
-            value={this.state.date}
-            selectRange
-            />
-             <Button className="reserve-button" onClick={() => this.handleReservation()}>Reserve</Button>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <div className="section">
+        <Container>
+          <Columns>
+            <Columns.Column className="is-5 is-offset-1">
+              <Calendar
+                onChange={this.onChange}
+                value={this.state.date}
+                selectRange
+              />
+              <Button className="reserve-button is-medium is-dark" onClick={() => this.handleReservation()}>Reserve</Button>
+            </Columns.Column>
+            <Columns.Column>
+              <div className="about">Price Per Night: </div>
+              <div className="about">Total Cost: </div>
+            </Columns.Column>
+          </Columns>
+        </Container>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Reservation;
