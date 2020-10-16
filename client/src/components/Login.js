@@ -1,6 +1,6 @@
 import React, {useState, useContext} from "react";
 import AuthService from "../Services/AuthService";
-// import Message from "../components/Message";
+import Message from "../components/Message";
 import {AuthContext} from "../Context/AuthContext";
 import { Button } from "react-bulma-components";
 
@@ -19,6 +19,7 @@ const Login = props => {
     const onSubmit = e => {
         e.preventDefault();
         AuthService.login(user).then(data => {
+            console.log(data);
             const { isAuthenticated, user, message } = data;
             if (isAuthenticated) {
                 //passes updated user
@@ -45,10 +46,10 @@ const Login = props => {
                        placeholder="Enter Username" />
                 
                 <label htmlFor="password" classname="sr-only"> Password: </label>
-                <input type="text" 
-                       name="password" 
-                       onChange={onChange} 
-                       className="form-control" 
+                <input type="password"
+                       name="password"
+                       onChange={onChange}
+                       className="form-control"
                        placeholder="Enter Password" />
                 <Button 
                     className="is-dark is-medium"
@@ -57,7 +58,7 @@ const Login = props => {
 
             </form>
 
-            {/* { message ? <Message message={message} /> : null } */}
+            { message ? <Message message={message} /> : null }
             
         </div>
 
