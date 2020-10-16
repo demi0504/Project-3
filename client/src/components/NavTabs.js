@@ -3,7 +3,6 @@ import AuthService from "../Services/AuthService";
 import { AuthContext } from "../Context/AuthContext";
 import { Link, useLocation } from "react-router-dom";
 import { Navbar } from 'react-bulma-components';
-import { authenticate } from "passport";
 import { Button } from "react-bulma-components";
 
 const NavTabs = props => {
