@@ -12,13 +12,11 @@ const Login = props => {
 
     const onChange = e => {
         setUser({...user, [e.target.name] : e.target.value });
-        console.log(user);
     }
 
     const onSubmit = e => {
         e.preventDefault();
         AuthService.login(user).then(data => {
-            console.log(data);
             const { isAuthenticated, user, message } = data;
             if (isAuthenticated) {
                 //passes updated user
