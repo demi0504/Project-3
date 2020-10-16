@@ -61,7 +61,7 @@ class Search extends Component {
   handleSearchByCity = () => {
     API.getFacilityCity(this.state.cityInput)
     .then(res =>
-      { console.log(JSON.stringify(res))
+      { 
         this.setState({ businesses: res.data })})
     .catch(err => console.log(err));
   }
@@ -105,7 +105,6 @@ class Search extends Component {
                     <option>CA</option>
                     <option>IL</option>
                     <option>NY</option>
-                    <option>OH</option>
                     <option>TN</option>
                     <option>TX</option>
                     <option>WA</option>
