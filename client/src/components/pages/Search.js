@@ -36,7 +36,7 @@ class Search extends Component {
     // }
     const stateInput = this.state.stateInput;
 
-    const businesses = this.state.businesses.filter(biz => biz.city == city);
+    const businesses = this.state.businesses.filter(biz => biz.city === city);
     if (this.state.city === stateInput) {
       this.setState({ businesses: businesses });
       console.log(businesses)
@@ -154,12 +154,12 @@ class Search extends Component {
           <hr/>
           <h1 className="column is-5 is-offset-1"><strong>Boarders in Nashville</strong></h1>
             <div className="column is-5 is-offset-1">
-              <div class="field has-addons">
+              <div className="field has-addons">
                 <div class="control">
-                  <input class="input" type="text" placeholder="Find a Boarder"/>
+                  <input className="input" type="text" placeholder="Find a Boarder"/>
                     </div>
                   <div class="control">
-                    <button onClick={this.handleSearch} class="button is-info">
+                    <button onClick={this.handleSearch} className="button is-info">
                       Search
                     </button>
                   </div>

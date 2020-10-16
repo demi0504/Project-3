@@ -2,7 +2,7 @@ import React from "react";
 import { Hero } from "react-bulma-components";
 import { Columns, Container } from 'react-bulma-components'
 import { Button } from "react-bulma-components";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const Home = () => (
   <div>

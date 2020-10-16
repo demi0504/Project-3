@@ -295,7 +295,7 @@ const Modal = ({ closeModal }) => {
                   disabled={!(formObject.name && formObject.address && formObject.city && formObject.state && formObject.zip && formObject.phone)}
                   onClick={handleFormSubmit}            
           >Submit</button>
-          <a className="button" onClick={closeModal}>Cancel</a>
+          <button className="button" onClick={closeModal}>Cancel</button>
         </footer>
       </div>
     </div>
