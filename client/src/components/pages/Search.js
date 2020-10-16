@@ -166,12 +166,6 @@ class Search extends Component {
                 </div>
             </div>
 
-            {/* button to test out reso page,move to cards */}
-            <Link to={{ pathname: "/reserve" }}>
-              <Button className="is-dark is-medium">Make A Reservation
-              </Button>
-            </Link>
-
           {this.state.businesses.map(biz => (
           <SearchContainer
             cityFilter={this.cityFilter}
