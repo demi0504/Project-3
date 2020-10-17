@@ -15,6 +15,8 @@ function SearchContainer(props) {
             <div className="media-content">
               <p className="title is-4">{props.name}</p>
             </div>
+            
+
             <div className="media-content">
               <p className="title is-4">{props.address}</p>
               <p className="title is-4">{props.city}, {props.state} {props.zip}</p>
