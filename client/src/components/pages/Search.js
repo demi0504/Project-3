@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
+import { Hero } from "react-bulma-components";
 import SearchContainer from "../SearchCard/SearchContainer"
 import API from "../../utils/API";
 import { Button } from "react-bulma-components";
-
+import { Columns, Container } from 'react-bulma-components'
 import { BrowserRouter as Link } from "react-router-dom";
 
 
@@ -104,10 +104,79 @@ class Search extends Component {
 
   render() {
     return (
-      <div className="container">
-          <h1 className="column is-5 is-offset-1"><strong>Does your dog require grooming services?</strong></h1>
+    <div>
+      <Hero className="is-medium is-light is-bold">
+        <img className="hero-background is-transparent" src="https://s3.amazonaws.com/petcentral.com/wp-content/uploads/2019/07/22160617/dog-hotel-article.jpg" alt="dog in hotel"/>
+          <div className="hero-body">
+            <Container>
+              <h2 className="subtitle">
+                Here you can search for a boarder that is closest to you!
+              </h2>
+            </Container>
+          </div>   
+      </Hero>
+
+
+
+      <Columns.Column>
+        <Columns>
+        <h1><strong>Search by State</strong></h1>
+                <div className="control mb-2">
+                  <div className="select is-primary">
+                    <select
+                      name="state"
+                      onChange={this.handleChangeByState}
+                      value={this.state.stateInput}
+                    >
+                    <option></option>
+                    <option>CA</option>
+                    <option>IL</option>
+                    <option>NY</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>WA</option>
+                    </select>
+                  </div>
+                <div className="control">
+                    <button className="button is-info" 
+                    onClick={this.handleSearchByState}>
+                      Search
+                    </button>
+                  </div>
+              </div>
+            <hr/>
+
+        <h1><strong>Search by City</strong></h1>
+          <div className="control mb-2">
+            <div className="select is-primary">
+              <select
+                name="city"
+                onChange={this.handleChangeByCity}
+                value={this.state.cityInput}
+                
+              >
+                <option></option>
+                <option>Austin</option>
+                <option>Chicago</option>
+                <option>Los Angeles</option>
+                <option>Nashville</option>
+                <option>New York</option>
+                <option>Seattle</option>
+              </select>
+            </div>
+          <div class="control">
+              <button className="button is-info"
+              onClick={this.handleSearchByCity}>
+                Search
+              </button>
+            </div>
+        </div>
+        </Columns>
+        <hr/>
+      <Columns>
+        <Columns.Column> 
+        <h1><strong>Does your dog require grooming services?</strong></h1>
             <br/>
-              <div className="column is-5 is-offset-1">
                 <div className="control">
                   <label className="radio">
                     <input type="radio" name="answer" value="groom" checked={this.state.hasGrooming === "groom"} onChange={this.handleGroomingChange}/>
@@ -118,73 +187,16 @@ class Search extends Component {
                     No
                   </label>
                 </div>  
-              </div>
-          <hr/>
-
-          <h1 className="column is-5 is-offset-1"><strong>Search by State</strong></h1>
-            <div className="column is-5 is-offset-1">
-                  <div className="control mb-2">
-                    <div className="select is-primary">
-                      <select
-                        name="state"
-                        onChange={this.handleChangeByState}
-                        value={this.state.stateInput}
-                      >
-                      <option></option>
-                      <option>CA</option>
-                      <option>IL</option>
-                      <option>NY</option>
-                      <option>TN</option>
-                      <option>TX</option>
-                      <option>WA</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="control">
-                      <button className="button is-info" 
-                      onClick={this.handleSearchByState}>
-                        Search
-                      </button>
-                    </div>
-                </div>
-
-              <hr/>
-
-          <h1 className="column is-5 is-offset-1"><strong>Search by City</strong></h1>
-          <div className="column is-5 is-offset-1">
-            <div className="control mb-2">
-              <div className="select is-primary">
-                <select
-                  name="city"
-                  onChange={this.handleChangeByCity}
-                  value={this.state.cityInput}
-                  
-                >
-                  <option></option>
-                  <option>Austin</option>
-                  <option>Chicago</option>
-                  <option>Los Angeles</option>
-                  <option>Nashville</option>
-                  <option>New York</option>
-                  <option>Seattle</option>
-                </select>
-              </div>
-            </div>
-            <div class="control">
-                <button className="button is-info"
-                onClick={this.handleSearchByCity}>
-                  Search
-                </button>
-              </div>
-          </div>
-          <hr/>
-
+              
             {/* button to test out reso page,move to cards */}
-            <Link to={{ pathname: "/reserve" }}>
-              <Button className="is-dark is-medium">Make A Reservation
-              </Button>
-            </Link>
-
+                
+                  <Link to={{ pathname: "/reserve" }}>
+                    <Button className="is-dark is-medium">Make A Reservation
+                    </Button>
+                  </Link>
+                  
+              </Columns.Column>
+            </Columns>
 
           {this.state.businesses.map(biz => (
           <SearchContainer
@@ -200,8 +212,10 @@ class Search extends Component {
           />
          ))}
             
-            
-          </div>
+
+          
+            </Columns.Column>
+            </div>
         );
                 }
         }
