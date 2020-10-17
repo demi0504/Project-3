@@ -36,6 +36,11 @@ module.exports = {
   create: function(req, res) {
     db.Facility
       .create(req.body)
+      .then(dbModel => {
+        const {_id} = dbModel
+        db.User.update({_id: req.user._id}, {$push: { facilities: _id }})
+        return dbModel
+      })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

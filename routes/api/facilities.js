@@ -1,11 +1,12 @@
 const router = require("express").Router();
 const facilityController = require("../../controllers/facilitysController");
+const passport = require("passport");
 
 // Matches with "/api/facilities"
 router
     .route("/")
     .get(facilityController.findAll)
-    .post(facilityController.create);
+    .post(passport.authenticate('jwt', { session: false }), facilityController.create);
 
 // Matches with "/api/facilities/:id"
 router
