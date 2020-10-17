@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import AuthService from "../Services/AuthService";
 import Message from "../components/Message";
 import { Button } from "react-bulma-components";
+import DogSVG from "./DogSVG/DogSVG";
 
 const Register = props => {
     const [user, setUser] = useState({ username: "", password: "", email: "", role: ""});
@@ -45,7 +46,8 @@ const Register = props => {
                 <h3>Please Register</h3>
                 <label htmlFor="username" classname="sr-only"> Username: </label>
                 <input type="text" 
-                       name="username" 
+                       name="username"
+                       value={user.username}
                        onChange={onChange} 
                        className="form-control" 
                        placeholder="Enter Username" />
@@ -53,6 +55,7 @@ const Register = props => {
                 <label htmlFor="password" classname="sr-only"> Password: </label>
                 <input type="password"
                        name="password"
+                       value={user.password}
                        onChange={onChange}
                        className="form-control"
                        placeholder="Enter Password" />
@@ -60,6 +63,7 @@ const Register = props => {
                 <label htmlFor="email" classname="sr-only"> Email: </label>
                 <input type="email"
                        name="email"
+                       value={user.email}
                        onChange={onChange}
                        className="form-control"
                        placeholder="Enter email address" />
@@ -67,6 +71,7 @@ const Register = props => {
                 <label htmlFor="role" classname="sr-only"> Role: </label>
                 <input type="text"
                        name="role"
+                       value={user.role}
                        onChange={onChange}
                        className="form-control"
                        placeholder="Enter Role (admin/user)" />
@@ -79,6 +84,8 @@ const Register = props => {
             </form>
 
             { message ? <Message message={message} /> : null }
+
+            <DogSVG />
             
         </div>
 

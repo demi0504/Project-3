@@ -18,14 +18,6 @@ function MasonryGrid() {
                     <OneImage />
                     <OneImage />
                     <OneImage />
-                    <OneImage />
-                    <OneImage />
-                    <OneImage />
-                    <OneImage />
-                    <OneImage />
-                    <OneImage />
-                    <OneImage />
-                    <OneImage />
                 </Masonry>
             </div>
             
