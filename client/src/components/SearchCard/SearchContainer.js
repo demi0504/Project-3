@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bulma-components";
+import OneImage from "../OneImage";
 
 
 function SearchContainer(props) {
@@ -10,6 +11,7 @@ function SearchContainer(props) {
     return (
 
       <div>
+        <OneImage />
         <div className="card">
           <div className="column is-12">
             <div className="media-content">
