@@ -186,7 +186,7 @@ class Search extends Component {
             key={biz.id}
             name={biz.name}
             address={biz.address}
-            price={biz.boardingServices.service1[1].price}
+            // price={biz.boardingServices.service1[1].price}
             city={biz.city}
             state={biz.state}
             zip={biz.zip}
