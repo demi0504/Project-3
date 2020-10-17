@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import Axios from 'axios';
-import OneImage from "../OneImage"
-import ThreeImage from "../ThreeImage"
 import ContactAlertModal from "../ContactAlertModal";
-import DogSVG from "../DogSVG/DogSVG"
-import MasonryGrid from "../MasonryGrid/MasonryGrid"
-import { Columns, Container } from 'react-bulma-components'
+import MasonryGrid from "../MasonryGrid/MasonryGrid";
+import { Columns, Container, Hero } from 'react-bulma-components' 
+import "../style/imgstyle.css";
 
 class Contact extends Component {
   constructor(props) {
@@ -50,9 +48,10 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <DogSVG />
-        <MasonryGrid />
         <section className="section">
+          <section className="section">
+            <MasonryGrid />
+          </section>
           <Container>
             <Columns>
               <Columns.Column className="is-half">
@@ -110,9 +109,10 @@ class Contact extends Component {
               </Columns.Column>
             </Columns>
           </Container>
+          <section className="section">
+            <MasonryGrid />
+          </section>
         </section>
-        <OneImage />
-        <ThreeImage />
       </div>
     );
   }
