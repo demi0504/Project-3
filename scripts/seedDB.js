@@ -10,7 +10,7 @@ let facilitySeed = [
   //Nashville
   {
     day: new Date().setDate(new Date()),
-    profName: "Paw Patrol",
+    name: "Paw Patrol",
     address: "252 Bransford Avenue Nashville, TN 37204",
     city:"Nashville",
     state: "TN",
@@ -173,7 +173,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "Spot Sleeper",
+    name: "Spot Sleeper",
     address: "919 Gallatin Pike S Madison, TN 37115",
     city:"Nashville",
     state: "TN",
@@ -312,7 +312,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "Where's Fido?",
+    name: "Where's Fido?",
     address: "2318 12th Avenue S Nashville, TN 37204",
     city:"Nashville",
     state: "TN",
@@ -420,7 +420,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "Prissy Pooch",
+    name: "Prissy Pooch",
     address: "4121 Hillsboro Pike Nashville, TN 37215",
     city:"Nashville",
     state: "TN",
@@ -583,7 +583,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "Nashville Tail Blazers",
+    name: "Nashville Tail Blazers",
     address: "2407 DICKERSON PIKE NASHVILLE, TN, 37207",
     city:"Nashville",
     state: "TN",
@@ -693,7 +693,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "South Paws",
+    name: "South Paws",
     address: "1315 8th Avenue South 37203",
     city:"Nashville",
     state: "TN",
@@ -766,7 +766,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "Pampered Pets",
+    name: "Pampered Pets",
     address: "149 Barker Road Nashville, TN 37214",
     city:"Nashville",
     state: "TN",
@@ -860,7 +860,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "Camp Bow Wow",
+    name: "Camp Bow Wow",
     address: "470 Craighead Street Avenue Nashville, TN 37204",
     city:"Nashville",
     state: "TN",
@@ -1023,7 +1023,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "The Belmont Pet Resort",
+    name: "The Belmont Pet Resort",
     address: "3206 Belmont Boulevard Nashville, TN 37212",
     city:"Nashville",
     state: "TN",
@@ -1152,7 +1152,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "The Dog Spot",
+    name: "The Dog Spot",
     address: "5001 Alabama Ave. Nashville, TN 37209",
     city:"Nashville",
     state: "TN",
@@ -1261,7 +1261,7 @@ let facilitySeed = [
 
   {
     day: new Date().setDate(new Date()),
-    profName: "Peace Love and Paws",
+    name: "Peace Love and Paws",
     address: "1221 Brick Church Pike Nashville, Tennessee 37207",
     city:"Nashville",
     state: "TN",
@@ -1348,7 +1348,7 @@ let facilitySeed = [
 // LA
 {
   day: new Date().setDate(new Date()),
-  profName: "Paradise Ranch Pet Resort",
+  name: "Paradise Ranch Pet Resort",
   address: "10268 La Tuna Canyon Rd, Los Angeles, CA 91352",
   city:"Los Angeles",
   state: "CA",
@@ -1511,7 +1511,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Oh Hello Dog: DTLA Dog Daycare & Boarding",
+  name: "Oh Hello Dog: DTLA Dog Daycare & Boarding",
   address: "1228 E 8th St, Los Angeles, CA 90021",
   city:"Los Angeles",
   state: "CA",
@@ -1650,7 +1650,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "The Pupper Club - Dog Daycare, Dog Grooming, Dog Boarding",
+  name: "The Pupper Club - Dog Daycare, Dog Grooming, Dog Boarding",
   address: "603 S Los Angeles St, Los Angeles, CA 90014",
   city:"Los Angeles",
   state: "CA",
@@ -1758,7 +1758,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "D Pet Hotels",
+  name: "D Pet Hotels",
   address: "1041 N Highland Ave, Los Angeles, CA 90038",
   city:"Los Angeles",
   state: "CA",
@@ -1921,7 +1921,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "CAGE FREE DOG BOARDING",
+  name: "CAGE FREE DOG BOARDING",
   address: "8218 Sunset Blvd, Los Angeles, CA 90046",
   city:"Los Angeles",
   state: "CA",
@@ -2031,7 +2031,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "South Park Doggie DTLA",
+  name: "South Park Doggie DTLA",
   address: "1320 S Grand Ave, Los Angeles, CA 90015",
   city:"Los Angeles",
   state: "CA",
@@ -2104,7 +2104,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Dog Resort",
+  name: "Dog Resort",
   address: "5203 Hollywood Blvd, Los Angeles, CA 90027",
   city:"Los Angeles",
   state: "CA",
@@ -2198,7 +2198,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Wag Hotels",
+  name: "Wag Hotels",
   address: "960 N Highland Ave, Los Angeles, CA 90038",
   city:"Los Angeles",
   state: "CA",
@@ -2361,7 +2361,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Puparazzi LA Dog Daycare And Boarding",
+  name: "Puparazzi LA Dog Daycare And Boarding",
   address: "1933 Pontius Ave, Los Angeles, CA 90025",
   city:"Los Angeles",
   state: "CA",
@@ -2490,7 +2490,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Doggie Goddess Pet Services",
+  name: "Doggie Goddess Pet Services",
   address: "810 South La Brea Ave, Los Angeles, CA 90036",
   city:"Los Angeles",
   state: "CA",
@@ -2599,7 +2599,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Bone Sweet Bone - Arts District",
+  name: "Bone Sweet Bone - Arts District",
   address: "435 Molino St, Los Angeles, CA 90013",
   city:"Los Angeles",
   state: "CA",
@@ -2686,7 +2686,7 @@ let facilitySeed = [
 // NYC
 {
   day: new Date().setDate(new Date()),
-  profName: "Paws In Chelsea",
+  name: "Paws In Chelsea",
   address: "145 W 24th St #1, New York, NY 10011",
   city:"New York",
   state: "NY",
@@ -2849,7 +2849,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "New York Dog Spa and Hotel",
+  name: "New York Dog Spa and Hotel",
   address: "32 W 25th St, New York, NY 10010",
   city:"New York",
   state: "NY",
@@ -2988,7 +2988,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "NYC Pet Services",
+  name: "NYC Pet Services",
   address: "31-21 31st St, Queens, NY 11106",
   city:"New York",
   state: "NY",
@@ -3096,7 +3096,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Camp Canine",
+  name: "Camp Canine",
   address: "46 W 73rd St, New York, NY 10023",
   city:"New York",
   state: "NY",
@@ -3259,7 +3259,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Dogs Delight",
+  name: "Dogs Delight",
   address: "75 Wall St #75, New York, NY 10005",
   city:"New York",
   state: "NY",
@@ -3369,7 +3369,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Happy Dogs",
+  name: "Happy Dogs",
   address: "403 1st Avenue, New York, NY 10010",
   city:"New York",
   state: "NY",
@@ -3442,7 +3442,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Dog Days of New York",
+  name: "Dog Days of New York",
   address: "2581 Broadway, New York, NY 10025",
   city:"New York",
   state: "NY",
@@ -3536,7 +3536,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Camp Ruff Ruff",
+  name: "Camp Ruff Ruff",
   address: "174 Sand Ln, Staten Island, NY 10305",
   city:"New York",
   state: "NY",
@@ -3699,7 +3699,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "NYC PETCARE",
+  name: "NYC PETCARE",
   address: "415 W 24th St, New York, NY 10011",
   city:"New York",
   state: "NY",
@@ -3828,7 +3828,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Celebrity Pets Hotel",
+  name: "Celebrity Pets Hotel",
   address: "1740 Broadway 15th floor, New York, NY 10019",
   city:"New York",
   state: "NY",
@@ -3937,7 +3937,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "My Pets Wellness",
+  name: "My Pets Wellness",
   address: "104 W 27th St, New York, NY 10001",
   city:"New York",
   state: "NY",
@@ -4024,7 +4024,7 @@ let facilitySeed = [
 // Chicago
 {
   day: new Date().setDate(new Date()),
-  profName: "VIP's Dog Hotel Day Care & Dog Boarding",
+  name: "VIP's Dog Hotel Day Care & Dog Boarding",
   address: "2926 W Lake St, Chicago, IL 60612",
   city:"Chicago",
   state: "IL",
@@ -4187,7 +4187,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Dog.",
+  name: "Dog.",
   address: "1030 N Halsted St, Chicago, IL 60642",
   city:"Chicago",
   state: "IL",
@@ -4326,7 +4326,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Found Chicago",
+  name: "Found Chicago",
   address: "4108 N Rockwell St, Chicago, IL 60618",
   city:"Chicago",
   state: "IL",
@@ -4434,7 +4434,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Stay. Modern Dog Hotel",
+  name: "Stay. Modern Dog Hotel",
   address: "4130 N Rockwell St, Chicago, IL 60618",
   city:"Chicago",
   state: "IL",
@@ -4597,7 +4597,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Rockstar Pets",
+  name: "Rockstar Pets",
   address: "2924 N Western Ave, Chicago, IL 60618",
   city:"Chicago",
   state: "IL",
@@ -4707,7 +4707,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Tucker Pup's Pet Resort",
+  name: "Tucker Pup's Pet Resort",
   address: "219 N Carpenter St, Chicago, IL 60607",
   city:"Chicago",
   state: "IL",
@@ -4780,7 +4780,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Active! Dog Daycare and Boarding",
+  name: "Active! Dog Daycare and Boarding",
   address: "2550 W Diversey Ave, Chicago, IL 60647",
   city:"Chicago",
   state: "IL",
@@ -4874,7 +4874,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Pooch Hotel",
+  name: "Pooch Hotel",
   address: "2228 N Clybourn Ave, Chicago, IL 60614",
   city:"Chicago",
   state: "IL",
@@ -5037,7 +5037,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "DoGone Fun!",
+  name: "DoGone Fun!",
   address: "1717 S State St, Chicago, IL 60616",
   city:"Chicago",
   state: "IL",
@@ -5166,7 +5166,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Chi-Town Dog House",
+  name: "Chi-Town Dog House",
   address: "2231 W Belmont Ave, Chicago, IL 60618",
   city:"Chicago",
   state: "IL",
@@ -5275,7 +5275,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Canine Social Club",
+  name: "Canine Social Club",
   address: "5508 N Western Ave, Chicago, IL 60625",
   city:"Chicago",
   state: "IL",
@@ -5362,7 +5362,7 @@ let facilitySeed = [
 // Austin
 {
   day: new Date().setDate(new Date()),
-  profName: "Austin Dogtown Boarding & Daycare",
+  name: "Austin Dogtown Boarding & Daycare",
   address: "537 Woodward St, Austin, TX 78704",
   city:"Austin",
   state: "TX",
@@ -5525,7 +5525,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Austin Pup Culture",
+  name: "Austin Pup Culture",
   address: "606 Kenniston Dr, Austin, TX 78752",
   city:"Austin",
   state: "TX",
@@ -5664,7 +5664,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Chinatics",
+  name: "Chinatics",
   address: "4 Kern Ramble St, Austin, TX 78722",
   city:"Austin",
   state: "TX",
@@ -5772,7 +5772,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Bed and Biscuit",
+  name: "Bed and Biscuit",
   address: "6004 City Park Rd, Austin, TX 78730",
   city:"Austin",
   state: "TX",
@@ -5935,7 +5935,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Dogtopia",
+  name: "Dogtopia",
   address: "13945 US-183 C-4, Austin, TX 78717",
   city:"Austin",
   state: "TX",
@@ -6045,7 +6045,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Austin Pet Ranch",
+  name: "Austin Pet Ranch",
   address: "14425 Farm to Market Rd 1826, Austin, TX 78737",
   city:"Austin",
   state: "TX",
@@ -6118,7 +6118,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Barking Hound",
+  name: "Barking Hound",
   address: "412 Josephine St, Austin, TX 78704",
   city:"Austin",
   state: "TX",
@@ -6212,7 +6212,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Taurus Academy",
+  name: "Taurus Academy",
   address: "6506 Burnet Rd, Austin, TX 78757",
   city:"Austin",
   state: "TX",
@@ -6375,7 +6375,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "SOCO Pet Lounge",
+  name: "SOCO Pet Lounge",
   address: "4917 S Congress Ave, Austin, TX 78745",
   city:"Austin",
   state: "TX",
@@ -6504,7 +6504,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Midtown Groom & Board",
+  name: "Midtown Groom & Board",
   address: "1207 Baylor St, Austin, TX 78703",
   city:"Austin",
   state: "TX",
@@ -6613,7 +6613,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Jackie's Play & Stay",
+  name: "Jackie's Play & Stay",
   address: "3822 Airport Blvd, Austin, TX 78722",
   city:"Austin",
   state: "TX",
@@ -6700,7 +6700,7 @@ let facilitySeed = [
 // Seattle
 {
   day: new Date().setDate(new Date()),
-  profName: "Seattle Dog Boarding",
+  name: "Seattle Dog Boarding",
   address: "11715 Roosevelt Way NE, Seattle, WA 98125",
   city:"Seattle",
   state: "WA",
@@ -6863,7 +6863,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Good Dog Daycare & Boarding",
+  name: "Good Dog Daycare & Boarding",
   address: "9064 Delridge Way SW, Seattle, WA 98106",
   city:"Seattle",
   state: "WA",
@@ -7002,7 +7002,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Seattle Canine Club",
+  name: "Seattle Canine Club",
   address: "2751 4th Ave S, Seattle, WA 98134",
   city:"Seattle",
   state: "WA",
@@ -7110,7 +7110,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Metro Dog",
+  name: "Metro Dog",
   address: "3412 16th Ave W, Seattle, WA 98119",
   city:"Seattle",
   state: "WA",
@@ -7273,7 +7273,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "DogCity",
+  name: "DogCity",
   address: "4457 36th Ave SW, Seattle, WA 98126",
   city:"Seattle",
   state: "WA",
@@ -7383,7 +7383,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Tails of the City",
+  name: "Tails of the City",
   address: "1621 12th Ave, Seattle, WA 98122",
   city:"Seattle",
   state: "WA",
@@ -7456,7 +7456,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Adorable Pet Lodge",
+  name: "Adorable Pet Lodge",
   address: "1043 S 140th St, Seattle, WA 98168",
   city:"Seattle",
   state: "WA",
@@ -7550,7 +7550,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Citydog! Club",
+  name: "Citydog! Club",
   address: "809 Olive Way, Seattle, WA 98101",
   city:"Seattle",
   state: "WA",
@@ -7713,7 +7713,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Central Bark",
+  name: "Central Bark",
   address: "838 Poplar Pl S, Seattle, WA 98144",
   city:"Seattle",
   state: "WA",
@@ -7842,7 +7842,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "Camp Crockett Dog Day Camp",
+  name: "Camp Crockett Dog Day Camp",
   address: "5611 Delridge Way SW, Seattle, WA 98106",
   city:"Seattle",
   state: "WA",
@@ -7951,7 +7951,7 @@ let facilitySeed = [
 
 {
   day: new Date().setDate(new Date()),
-  profName: "House of Ruff",
+  name: "House of Ruff",
   address: "2603 S Jackson St, Seattle, WA 98144",
   city:"Seattle",
   state: "WA",
