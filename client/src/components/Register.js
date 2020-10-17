@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import AuthService from "../Services/AuthService";
 import Message from "../components/Message";
 import { Button } from "react-bulma-components";
+import DogSVG from "./DogSVG/DogSVG";
 
 const Register = props => {
     const [user, setUser] = useState({ username: "", password: "", email: "", role: ""});
@@ -83,6 +84,8 @@ const Register = props => {
             </form>
 
             { message ? <Message message={message} /> : null }
+
+            <DogSVG />
             
         </div>
 

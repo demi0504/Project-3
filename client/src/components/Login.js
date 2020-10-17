@@ -3,6 +3,7 @@ import AuthService from "../Services/AuthService";
 import Message from "../components/Message";
 import {AuthContext} from "../Context/AuthContext";
 import { Button } from "react-bulma-components";
+import DogSVG from "./DogSVG/DogSVG";
 
 const Login = props => {
     const [user, setUser] = useState({ username: "", password: ""});
@@ -56,6 +57,8 @@ const Login = props => {
             </form>
 
             { message ? <Message message={message} /> : null }
+
+            <DogSVG />
             
         </div>
 
