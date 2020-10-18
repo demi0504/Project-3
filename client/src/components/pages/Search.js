@@ -187,68 +187,6 @@ class Search extends Component {
                     No
                   </label>
                 </div>  
-<<<<<<< HEAD
-              </div>
-          <hr/>
-
-          <h1 className="column is-5 is-offset-1"><strong>Search by State</strong></h1>
-            <div className="column is-5 is-offset-1">
-                  <div className="control mb-2">
-                    <div className="select is-primary">
-                      <select
-                        name="state"
-                        onChange={this.handleChangeByState}
-                        value={this.state.stateInput}
-                      >
-                      <option></option>
-                      <option>CA</option>
-                      <option>IL</option>
-                      <option>NY</option>
-                      <option>TN</option>
-                      <option>TX</option>
-                      <option>WA</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="control">
-                      <button className="button is-info" 
-                      onClick={this.handleSearchByState}>
-                        Search
-                      </button>
-                    </div>
-                </div>
-
-              <hr/>
-
-          <h1 className="column is-5 is-offset-1"><strong>Search by City</strong></h1>
-          <div className="column is-5 is-offset-1">
-            <div className="control mb-2">
-              <div className="select is-primary">
-                <select
-                  name="city"
-                  onChange={this.handleChangeByCity}
-                  value={this.state.cityInput}
-                  
-                >
-                  <option></option>
-                  <option>Austin</option>
-                  <option>Chicago</option>
-                  <option>Los Angeles</option>
-                  <option>Nashville</option>
-                  <option>New York</option>
-                  <option>Seattle</option>
-                </select>
-              </div>
-            </div>
-            <div class="control">
-                <button className="button is-info"
-                onClick={this.handleSearchByCity}>
-                  Search
-                </button>
-              </div>
-          </div>
-          <hr/>
-=======
               
             {/* button to test out reso page,move to cards */}
                 
@@ -259,7 +197,6 @@ class Search extends Component {
                   
               </Columns.Column>
             </Columns>
->>>>>>> master
 
           {this.state.businesses.map(biz => (
           <SearchContainer
@@ -276,16 +213,11 @@ class Search extends Component {
             
           />
          ))}
-<<<<<<< HEAD
-            { console.log("price: ", this.props.price) }
-          </div>
-=======
             
 
           
             </Columns.Column>
             </div>
->>>>>>> master
         );
                 }
         }
