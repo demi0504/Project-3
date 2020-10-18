@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/search" component={Search} />
         <Route path="/contact" component={Contact} />
-        <Route path="/reserve" component={Reservation} />
+        <Route path="/reserve/:id" component={Reservation} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Footer />

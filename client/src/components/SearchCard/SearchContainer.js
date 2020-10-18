@@ -28,7 +28,7 @@ function SearchContainer(props) {
               {props.about}
             </div>
             <button className="button is-light is-medium">More Info</button>
-            <Link to={{ pathname: "/reserve" }}>
+            <Link to={{ pathname: `/reserve/${props.id}` }}>
               <Button className="is-dark is-medium reso-btn">Reserve</Button>
             </Link>
           </div>
