@@ -15,7 +15,8 @@ const facilitySchema = new Schema({
     occupancy: { type: Number },
     daycare: { type: String },
     boarding: { type: String },
-    grooming: { type: String }
+    grooming: { type: String },
+    reservations:[ { type: mongoose.Schema.Types.ObjectId, ref: 'Reservation' }]
 });
 
 

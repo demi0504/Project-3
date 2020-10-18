@@ -1,12 +1,14 @@
 const router = require('express').Router();
 const Reservation = require('../../models/reservation');
+const Facility = require('../../models/facility');
 const reservationController = require("../../controllers/reservationsController");
 
 router.post('/create', async (req, res) => {
     console.log(req.body);
     const reservation = new Reservation({
         dateStart: req.body.dateStart, 
-        dateEnd: req.body.dateEnd
+        dateEnd: req.body.dateEnd,
+        facility: req.body.id
     })
     try {
         const newReservation = await reservation.save()

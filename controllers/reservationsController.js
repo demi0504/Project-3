@@ -6,10 +6,10 @@ const Reservation = require('../models/reservation');
 
 
 module.exports = {
-  create: function(req, res) {
-    const { dateStart, dateEnd } = req.body;
-    const mReservation = new Reservation({ dateStart, dateEnd });
-    mReservation.save();
-    
+  create: (req, res) => {
+    const { id, dateStart, dateEnd } = req.body;
+    console.log("is this:", req.body);
+    const newReservation = new Reservation({ facility: id, dateStart, dateEnd });
+    newReservation.save();
   }
 }

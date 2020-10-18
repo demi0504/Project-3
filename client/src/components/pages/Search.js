@@ -201,11 +201,10 @@ class Search extends Component {
           {this.state.businesses.map(biz => (
           <SearchContainer
             cityFilter={this.cityFilter}
-            id={biz.id}
+            id={biz._id}
             key={biz.id}
             name={biz.name}
             address={biz.address}
-            // price={biz.boardingServices.service1[1].price}
             city={biz.city}
             state={biz.state}
             zip={biz.zip}
