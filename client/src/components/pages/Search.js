@@ -110,7 +110,9 @@ class Search extends Component {
           <div className="hero-body">
             <Container>
               <h2 className="subtitle">
-                Here you can search for a boarder that is closest to you!
+                <div className="thick">
+                  Here you can search for a place to keep your pup!
+                </div>
               </h2>
             </Container>
           </div>   
@@ -118,85 +120,81 @@ class Search extends Component {
 
 
 
-      <Columns.Column>
-        <Columns>
-        <h1><strong>Search by State</strong></h1>
-                <div className="control mb-2">
-                  <div className="select is-primary">
-                    <select
-                      name="state"
-                      onChange={this.handleChangeByState}
-                      value={this.state.stateInput}
-                    >
-                    <option></option>
-                    <option>CA</option>
-                    <option>IL</option>
-                    <option>NY</option>
-                    <option>TN</option>
-                    <option>TX</option>
-                    <option>WA</option>
-                    </select>
-                  </div>
-                <div className="control">
-                    <button className="button is-info" 
-                    onClick={this.handleSearchByState}>
-                      Search
-                    </button>
-                  </div>
-              </div>
-            <hr/>
+      <div className="section">
+        <Container>
+          <Columns>
+            <Columns.Column className="is-4">
+              <h1><strong>Search by State</strong></h1>
+                      <div className="control mb-2">
+                        <div className="select is-primary">
+                          <select
+                            name="state"
+                            onChange={this.handleChangeByState}
+                            value={this.state.stateInput}
+                          >
+                          <option></option>
+                          <option>CA</option>
+                          <option>IL</option>
+                          <option>NY</option>
+                          <option>TN</option>
+                          <option>TX</option>
+                          <option>WA</option>
+                          </select>
+                        </div>
+                      <div className="control">
+                          <button className="button is-info" 
+                          onClick={this.handleSearchByState}>
+                            Search
+                          </button>
+                        </div>
+                    </div>
+                  </Columns.Column>  
 
-        <h1><strong>Search by City</strong></h1>
-          <div className="control mb-2">
-            <div className="select is-primary">
-              <select
-                name="city"
-                onChange={this.handleChangeByCity}
-                value={this.state.cityInput}
-                
-              >
-                <option></option>
-                <option>Austin</option>
-                <option>Chicago</option>
-                <option>Los Angeles</option>
-                <option>Nashville</option>
-                <option>New York</option>
-                <option>Seattle</option>
-              </select>
-            </div>
-          <div class="control">
-              <button className="button is-info"
-              onClick={this.handleSearchByCity}>
-                Search
-              </button>
-            </div>
-        </div>
-        </Columns>
-        <hr/>
-      <Columns>
-        <Columns.Column> 
+      <Columns.Column className="is-6">                              
         <h1><strong>Does your dog require grooming services?</strong></h1>
-            <br/>
-                <div className="control">
-                  <label className="radio">
-                    <input type="radio" name="answer" value="groom" checked={this.state.hasGrooming === "groom"} onChange={this.handleGroomingChange}/>
-                    Yes
-                  </label>
-                  <label className="radio">
-                    <input type="radio" name="answer" value="nogroom" checked={this.state.hasGrooming === "nogroom"} onChange={this.handleGroomingChange}/>
-                    No
-                  </label>
-                </div>  
+                <br/>
+                    <div className="control">
+                      <label className="radio">
+                        <input type="radio" name="answer" value="groom" checked={this.state.hasGrooming === "groom"} onChange={this.handleGroomingChange}/>
+                        Yes
+                      </label>
+                      <label className="radio">
+                        <input type="radio" name="answer" value="nogroom" checked={this.state.hasGrooming === "nogroom"} onChange={this.handleGroomingChange}/>
+                        No
+                      </label>
+                    </div> 
+        </Columns.Column>
+          <Columns.Column className="">
+            <h1><strong>Search by City</strong></h1>
+              <div className="control mb-2">
+                <div className="select is-primary">
+                  <select
+                    name="city"
+                    onChange={this.handleChangeByCity}
+                    value={this.state.cityInput}
+                    
+                  >
+                    <option></option>
+                    <option>Austin</option>
+                    <option>Chicago</option>
+                    <option>Los Angeles</option>
+                    <option>Nashville</option>
+                    <option>New York</option>
+                    <option>Seattle</option>
+                  </select>
+                </div>
+              <div class="control">
+                  <button className="button is-info"
+                  onClick={this.handleSearchByCity}>
+                    Search
+                  </button>
+                </div>
+            </div>
+                    </Columns.Column>
+                  </Columns>
+                </Container> 
+              </div>   
               
-            {/* button to test out reso page,move to cards */}
-                
-                  <Link to={{ pathname: "/reserve" }}>
-                    <Button className="is-dark is-medium">Make A Reservation
-                    </Button>
-                  </Link>
-                  
-              </Columns.Column>
-            </Columns>
 
           {this.state.businesses.map(biz => (
           <SearchContainer
@@ -215,7 +213,7 @@ class Search extends Component {
             
 
           
-            </Columns.Column>
+            
             </div>
         );
                 }
