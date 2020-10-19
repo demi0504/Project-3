@@ -7,9 +7,9 @@ export default class DogSVG2 extends Component {
         anime({
             targets: "#demo-svg path",
             strokeDashoffset: [anime.setDashoffset, 0],
-            opacity: [.35, .9],
+            opacity: [.35, .75],
             easing: "easeInOutQuad",
-            duration: 5000,
+            duration: 8000,
             direction: "alternate",
             loop: true
           });
@@ -22,17 +22,17 @@ export default class DogSVG2 extends Component {
     return (
     
         <svg
-        className="behind"
+        className="behind larger"
         id="demo-svg"
-        x="0px" 
-        y="0px" 
-        viewBox="0 0 200 200"
+        // x="0px" 
+        // y="0px" 
+        viewBox="0 0 200 140"
       >
   
         <path 
           className="centered"
           fill="wheat" 
-          stroke="midnightblue" 
+          stroke="black" 
           stroke-width="2"
           d="M83.062,9.073c1.901,1.297,4.286,3.608,6.191,5.646l2.388,2.592
           c1.562,1.625,3.94,1.425,6.055,1.834l0.743,0.135c2.312,1.218,1.576,3.673,0.819,5.512l-0.477,1.153

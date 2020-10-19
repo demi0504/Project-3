@@ -1,0 +1,42 @@
+.in-front {
+    position: relative;
+    z-index: 10;
+}
+
+.padding-top {
+    padding-top: 50px;
+}
+
+.padding-bottom {
+    padding-bottom: 400px;
+}   
+
+.padding-bottom2 {
+    padding-bottom: 450px;
+}   
+
+.bG {
+    background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+    z-index: -3;
+}
+
+@import url('//fonts.googleapis.com/css?family=Pacifico&text=Pure');
+
+
+.loginH3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 
+    1px 0px 1px #bed6d6, 0px 1px 1px #eee, 
+    2px 1px 1px #bed6d6, 1px 2px 1px #eee,
+    3px 2px 1px #bed6d6, 2px 3px 1px #eee,
+    4px 3px 1px #bed6d6, 3px 4px 1px #eee,
+    5px 4px 1px #bed6d6, 4px 5px 1px #eee,
+    6px 5px 1px #bed6d6, 5px 6px 1px #eee,
+    7px 6px 1px #bed6d6;
+    margin: 30px;
+}
+
+
+
