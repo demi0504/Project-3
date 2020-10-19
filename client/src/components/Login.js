@@ -4,6 +4,7 @@ import Message from "../components/Message";
 import {AuthContext} from "../Context/AuthContext";
 import { Button } from "react-bulma-components";
 import DogSVG from "./DogSVG/DogSVG";
+import "./style/form-styles.css";
 
 const Login = props => {
     const [user, setUser] = useState({ username: "", password: ""});
@@ -33,33 +34,49 @@ const Login = props => {
 
     return(
 
-        <div>
-            <form onSubmit={onSubmit}>
-                <h3>Please sign in</h3>
-                <label htmlFor="username" classname="sr-only"> Username: </label>
-                <input type="text" 
-                       name="username" 
-                       onChange={onChange} 
-                       className="form-control" 
-                       placeholder="Enter Username" />
+        <div className="hero is-fullheight bG padding-bottom2">
+          <div className="padding-top">
+            <div className="container">
+                <DogSVG />
+                <div className="columns is-centered in-front">
+                    <div className="column is-5-tablet is-4-desktop is-3-widescreen">
+                        <form onSubmit={onSubmit}>
+                            <h3 className="is-size-3 loginH3">Please sign in</h3>
+                            <div className="mt-2">
+                            <label htmlFor="username" className="mr-1"> Username: </label>
+                            <input type="text" 
+                                name="username" 
+                                onChange={onChange} 
+                                className="form-control" 
+                                placeholder="Enter Username" />
+                            </div>
+
+                            <div className="mt-2">
+                            <label htmlFor="password" className="mr-2"> Password:  </label>
+                            <input type="password"
+                                name="password"
+                                onChange={onChange}
+                                className="form-control"
+                                placeholder="Enter Password" />
+                            </div>
+
+                            <div className="mt-4">
+                            <Button 
+                                className="button is-dark is-medium"
+                                type="submit"> Log In
+                            </Button>
+                            </div>
+                        </form>
+
+                        { message ? <Message message={message} /> : null }
+
                 
-                <label htmlFor="password" classname="sr-only"> Password: </label>
-                <input type="password"
-                       name="password"
-                       onChange={onChange}
-                       className="form-control"
-                       placeholder="Enter Password" />
-                <Button 
-                    className="is-dark is-medium"
-                    type="submit"> Log In
-                </Button>
-
-            </form>
-
-            { message ? <Message message={message} /> : null }
-
-            <DogSVG />
+                </div>
+                
+                </div>
             
+            </div>
+          </div>  
         </div>
 
     )

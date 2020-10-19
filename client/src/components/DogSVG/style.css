@@ -4,17 +4,13 @@
   }
 
   .centered {
-    /* position: fixed; */
     right: 25%;
-    /* bottom: 10%; */
-    -webkit-transform: translateX(30%) translateY(1%);
-    -ms-transform: translateX(30%) translateY(1%);
-    transform: translateX(30%) translateY(1%);
+    -webkit-transform: translateX(28%) translateY(29%);
+    -ms-transform: translateX(28%) translateY(29%);
+    transform: translateX(28%) translateY(29%);
   }
 
-  .behind {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: -1;
+  svg {
+    position: absolute;
+    z-index: 1;
   }
