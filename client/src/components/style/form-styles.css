@@ -21,6 +21,7 @@
 }
 
 @import url('//fonts.googleapis.com/css?family=Pacifico&text=Pure');
+@import url('//fonts.googleapis.com/css?family=Chilanka&display=swap');
 
 
 .loginH3 {
@@ -38,5 +39,15 @@
     margin: 30px;
 }
 
+.naveHeaders {
+    color: #363636;
+    font-family: 'Chilanka', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 
+    1px 0px 1px #bed6d6, 0px 1px 1px #eee, 
+    2px 1px 1px #acbbbb, 1px 2px 1px #eee,
+    3px 2px 1px #bed6d6
+}
 
 
