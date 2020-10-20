@@ -1,0 +1,11 @@
+
+  .SVG2 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    right: 25%;
+    -webkit-transform: translateX(130%) translateY(15%);
+    -ms-transform: translateX(130%) translateY(15%);
+    transform: translateX(130%) translateY(15%);
+    position: absolute;
+    z-index: 1;
+  }
