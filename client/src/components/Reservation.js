@@ -3,6 +3,7 @@ import { Columns, Container } from 'react-bulma-components'
 import { Button } from "react-bulma-components";
 import Calendar from 'react-calendar';
 import API from "../utils/API";
+import passport from 'passport';
 import Axios from 'axios';
 import 'react-calendar/dist/Calendar.css';
 
@@ -22,6 +23,9 @@ class Reservation extends Component {
 
   handleReservation(event) {
     const { id } = this.props.match.params;
+    
+     
+
     console.log(id);
 
     API.createReservation(

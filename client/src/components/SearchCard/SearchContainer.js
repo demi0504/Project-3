@@ -1,42 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bulma-components";
+import { Columns, Container } from 'react-bulma-components'
 import OneImage from "../OneImage";
 
 
 function SearchContainer(props) {
-
-
-  
     return (
-
-      <div>
-        <OneImage />
-        <div className="card">
-          <div className="column is-12">
+        <div className="card has-text-centered search-margin">
             <div className="media-content">
-              <p className="title is-4">{props.name}</p>
+              <div className="bizName">{props.name}</div>
             </div>
             <div className="media-content">
-              <p className="title is-4">{props.address}</p>
-              <p className="title is-4">{props.city}, {props.state} {props.zip}</p>
+              <p className="about">{props.address}</p>
+              <p className="about">{props.city}, {props.state} {props.zip}</p>
             </div>
             <div className="media-content">
-              <p className="title is-4">{props.phone}</p>
+              <p className="about">Price Per Night: ${props.price}</p>
             </div>
-            <div className="content">
-              {props.about}
+            <div className="media-content">
+              <p className="about">{props.phone}</p>
             </div>
-            <button className="button is-light is-medium">More Info</button>
             <Link to={{ pathname: `/reserve/${props.id}` }}>
-              <Button className="is-dark is-medium reso-btn">Reserve</Button>
+              <Button className="is-dark is-medium reso-btn">Make A Reservation</Button>
             </Link>
-          </div>
+            <div className="media-content">
+              <OneImage />
+            </div>
         </div>
-      </div>
-
-    );
-  
+    ); 
 };
 
 export default SearchContainer;
