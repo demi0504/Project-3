@@ -139,85 +139,82 @@ class Search extends Component {
                           </select>
                         </div>
                       <div className="control">
-                          <button className="button is-info" 
+                          <button className="button is-info search-btn" 
                           onClick={this.handleSearchByState}>
                             Search
                           </button>
                         </div>
                     </div>
                   </Columns.Column>  
-
-      <Columns.Column className="is-6">                              
-        <h1><strong>Does your dog require grooming services?</strong></h1>
-                <br/>
-                    <div className="control">
-                      <label className="radio">
-                        <input type="radio" name="answer" value="groom" checked={this.state.hasGrooming === "groom"} onChange={this.handleGroomingChange}/>
-                        Yes
-                      </label>
-                      <label className="radio">
-                        <input type="radio" name="answer" value="nogroom" checked={this.state.hasGrooming === "nogroom"} onChange={this.handleGroomingChange}/>
-                        No
-                      </label>
-                    </div> 
-        </Columns.Column>
-          <Columns.Column>
-            <h1><strong>Search by City</strong></h1>
-              <div className="control mb-2">
-                <div className="select is-primary">
-                  <select
-                    name="city"
-                    onChange={this.handleChangeByCity}
-                    value={this.state.cityInput}
-                    
-                  >
-                    <option></option>
-                    <option>Austin</option>
-                    <option>Chicago</option>
-                    <option>Los Angeles</option>
-                    <option>Nashville</option>
-                    <option>New York</option>
-                    <option>Seattle</option>
-                  </select>
-                </div>
-              <div class="control">
-                  <button className="button is-info"
-                  onClick={this.handleSearchByCity}>
-                    Search
-                  </button>
-                </div>
-            </div>
+                  <Columns.Column className="is-6">                              
+                    <h1><strong>Does your dog require grooming services?</strong></h1>
+                      <br/>
+                        <div className="control">
+                          <label className="radio">
+                              <input type="radio" name="answer" value="groom" checked={this.state.hasGrooming === "groom"} onChange={this.handleGroomingChange}/>
+                                  Yes
+                          </label>
+                          <label className="radio">
+                              <input type="radio" name="answer" value="nogroom" checked={this.state.hasGrooming === "nogroom"} onChange={this.handleGroomingChange}/>
+                                  No
+                              </label>
+                        </div> 
+                    </Columns.Column>
+                    <Columns.Column>
+                      <h1><strong>Search by City</strong></h1>
+                        <div className="control mb-2">
+                          <div className="select is-primary">
+                            <select
+                              name="city"
+                              onChange={this.handleChangeByCity}
+                              value={this.state.cityInput}
+                            >
+                              <option></option>
+                              <option>Austin</option>
+                              <option>Chicago</option>
+                              <option>Los Angeles</option>
+                              <option>Nashville</option>
+                              <option>New York</option>
+                              <option>Seattle</option>
+                            </select>
+                          </div>
+                          <div class="control">
+                            <button className="button is-info search-btn"
+                            onClick={this.handleSearchByCity}>
+                              Search
+                            </button>
+                          </div>
+                      </div>
                     </Columns.Column>
                   </Columns>
                 </Container> 
-              </div>   
-              
-        <div className="section">
-          <Container>
-            <Columns>
-            <Columns.Column className="is-three-fifths is-offset-one-fifth">
-          {this.state.businesses.map((biz, index) => {
-            const price = biz.boardingServices[0].service1[0].price;
-    
-            return (
-              <SearchContainer
-                cityFilter={this.cityFilter}
-                id={biz._id}
-                key={index}
-                name={biz.name}
-                address={biz.address}
-                city={biz.city}
-                state={biz.state}
-                zip={biz.zip}
-                phone={biz.phone}
-                price={price}
-              />
-            )
-          })}
-          </Columns.Column>
-          </Columns>
-          </Container>
-          </div>
+              </div>         
+              <div className="section">
+                <Container>
+                  <Columns>
+                    <Columns.Column className="is-three-fifths is-offset-one-fifth">
+                      {this.state.businesses.map((biz, index) => {
+                        const price = biz.boardingServices[0].service1[0].price;
+                        console.log("business", this.state.businesses);
+                          return (
+                            <SearchContainer
+                              cityFilter={this.cityFilter}
+                              id={biz._id}
+                              key={index}
+                              name={biz.name}
+                              address={biz.address}
+                              city={biz.city}
+                              state={biz.state}
+                              zip={biz.zip}
+                              phone={biz.phone}
+                              price={price}
+                            />
+                          )
+                        })}
+                      </Columns.Column>
+                    </Columns>
+                </Container>
+              </div>
         </div>
         );
       }

@@ -48,7 +48,7 @@ class Reservation extends Component {
 
     API.getFacilityId(id)
       .then(res => {
-        console.log("facility id: ", res);
+        console.log("res: ", res)
         this.setState({ info: res.data })
       })
       .catch(error => {
@@ -56,15 +56,25 @@ class Reservation extends Component {
       })
   }
 
-  render() {
-    const { info, date } = this.state
+  render() {   
     return (
       <div>
         <div className="section">
         <Container>
           <Columns>
             <Columns.Column className="is-5 is-offset-1">
-            <h1 className="thick">{info.name}</h1>
+            {/* {this.state.info.map((sub, index) => {
+            const price = sub.boardingServices[0].service1[0].price;    
+            return (
+              <div
+              price={sub.price}
+              />
+                
+             
+              
+            )
+          })} */}
+            
               <Calendar
                 onChange={this.onChange}
                 value={this.state.date}
@@ -73,8 +83,13 @@ class Reservation extends Component {
               <Button className="reserve-button is-medium is-dark" onClick={() => this.handleReservation()}>Reserve</Button>
             </Columns.Column>
             <Columns.Column>
-              <div className="about">Price Per Night: </div>
-              <div className="about">Total Cost: </div>
+              
+                
+                
+                  <div>
+                    <div className="about">Price Per Night: </div>
+                    <div className="about">Total Cost: </div>
+                  </div>
             </Columns.Column>
           </Columns>
         </Container>
