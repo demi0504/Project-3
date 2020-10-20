@@ -4,6 +4,7 @@ import { AuthContext } from "../Context/AuthContext";
 import { Link, useLocation } from "react-router-dom";
 import { Navbar } from 'react-bulma-components';
 import { Button } from "react-bulma-components";
+import TextAnimation from "./TextAnimation/TextAnimation"
 
 const NavTabs = props => {
   const location = useLocation();
@@ -117,6 +118,8 @@ const NavTabs = props => {
           Sign Up
         </Link>
       </Navbar.Item>*/}
+
+      <TextAnimation />
 
     </ Navbar>
   );
