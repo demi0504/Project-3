@@ -11,14 +11,7 @@ const Home = () => (
         <div className="hero-body">
           <Container>
             <p className="thick">Worry Free Pet Boarding.</p>
-            <Link to={{ pathname: "/search" }}>
-              <Button className="is-dark is-medium">Book A Stay
-              </Button>
-            </Link>
-            <Link to={{ pathname: "/contact" }}>
-              <Button className="is-light is-medium">Contact
-              </Button>
-            </Link>
+            
           </Container>
         </div>   
     </Hero>
@@ -41,7 +34,7 @@ const Home = () => (
       <Container>
         <Columns>
           <Columns.Column className="is-half is-offset-one-quarter">
-            <p className="thick has-text-centered">Add Your Buisness to AirBob</p>
+            <p className="thick has-text-centered">Add Your Business to AirBob</p>
             <p className="about">Own a pet boarding facility in the area?</p>
            </Columns.Column>
         </Columns>
@@ -50,10 +43,7 @@ const Home = () => (
             <p className="about">
               If you would like to have your kennel added to our site fill out our sign up 
               form and start receiving bookings today!
-              <Link to={{ pathname: "/signup" }}>
-              <Button className="is-dark is-medium sign-up">Sign Up
-              </Button>
-            </Link>
+              
             </p> 
           </Columns.Column>
           <Columns.Column className="is-5 is-offset-1">
