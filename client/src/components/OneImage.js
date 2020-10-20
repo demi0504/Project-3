@@ -22,7 +22,7 @@ class OneImage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="is-flex is-horizontal-center">
         <img alt={this.state.result} src={this.state.result} className="image-dog"/>
       </div>
     );

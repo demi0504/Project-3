@@ -105,7 +105,7 @@ class Search extends Component {
   render() {
     return (
     <div>
-      <Hero className="is-medium is-light is-bold">
+      <Hero className="is-large has-background">
         <img className="hero-background is-transparent" src="https://s3.amazonaws.com/petcentral.com/wp-content/uploads/2019/07/22160617/dog-hotel-article.jpg" alt="dog in hotel"/>
           <div className="hero-body">
             <Container>
@@ -117,9 +117,6 @@ class Search extends Component {
             </Container>
           </div>   
       </Hero>
-
-
-
       <div className="section">
         <Container>
           <Columns>
@@ -164,7 +161,7 @@ class Search extends Component {
                       </label>
                     </div> 
         </Columns.Column>
-          <Columns.Column className="">
+          <Columns.Column>
             <h1><strong>Search by City</strong></h1>
               <div className="control mb-2">
                 <div className="select is-primary">
@@ -195,29 +192,36 @@ class Search extends Component {
                 </Container> 
               </div>   
               
-
-          {this.state.businesses.map(biz => (
-          <SearchContainer
-            cityFilter={this.cityFilter}
-            id={biz._id}
-            key={biz.id}
-            name={biz.name}
-            address={biz.address}
-            city={biz.city}
-            state={biz.state}
-            zip={biz.zip}
-            phone={biz.phone}
-            
-          />
-         ))}
-            
-
-          
-            
-            </div>
+        <div className="section">
+          <Container>
+            <Columns>
+            <Columns.Column className="is-three-fifths is-offset-one-fifth">
+          {this.state.businesses.map((biz, index) => {
+            const price = biz.boardingServices[0].service1[0].price;
+    
+            return (
+              <SearchContainer
+                cityFilter={this.cityFilter}
+                id={biz._id}
+                key={index}
+                name={biz.name}
+                address={biz.address}
+                city={biz.city}
+                state={biz.state}
+                zip={biz.zip}
+                phone={biz.phone}
+                price={price}
+              />
+            )
+          })}
+          </Columns.Column>
+          </Columns>
+          </Container>
+          </div>
+        </div>
         );
-                }
-        }
+      }
+    }
 
 
 export default Search;

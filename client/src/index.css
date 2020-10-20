@@ -54,6 +54,18 @@ code {
 .reso-btn {
   margin-left: 10px;
 }
+.bizName {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.is-horizontal-center {
+  justify-content: center;
+}
+.search-margin {
+  margin: 10px;
+  padding: 10px;
+}
 /*Reservation page styling*/
 .reserve-button {
   margin: 10px;
