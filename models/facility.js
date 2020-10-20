@@ -16,7 +16,7 @@ const facilitySchema = new Schema({
     daycare: { type: String },
     boarding: { type: String },
     grooming: { type: String },
-    reservations:[ { type: mongoose.Schema.Types.ObjectId, ref: 'Reservation' }]
+    // reservations:[ { type: mongoose.Schema.Types.ObjectId, ref: 'Reservation' }]
 });
 
 

@@ -11,7 +11,6 @@ const Home = () => (
         <div className="hero-body">
           <Container>
             <p className="thick">Worry Free Pet Boarding.</p>
-            
           </Container>
         </div>   
     </Hero>
@@ -43,7 +42,6 @@ const Home = () => (
             <p className="about">
               If you would like to have your kennel added to our site fill out our sign up 
               form and start receiving bookings today!
-              
             </p> 
           </Columns.Column>
           <Columns.Column className="is-5 is-offset-1">
