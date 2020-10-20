@@ -215,13 +215,7 @@ const Modal = ({ closeModal }) => {
               placeholder="Ex: All Dogs must have up to date vet records."
               value={formObject.requirements}
             />
-            <h2>Do you have a website?</h2>
-            <Input 
-              onChange={handleInputChange}
-              name="src"
-              placeholder="http://www. yourwebsite .com/"
-              value={formObject.src}
-            />
+            
             <h2>Do you offer day care services?</h2>
             <div className="control">
                 <label className="radio">
