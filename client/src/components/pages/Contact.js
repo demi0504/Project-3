@@ -55,7 +55,7 @@ class Contact extends Component {
           <Container>
             <Columns>
               <Columns.Column className="is-half">
-                <h1 className="thick">Lets Talk!</h1>
+                <h1 className="thick loginH3">Lets Talk!</h1>
                 <form id="contact-form" onSubmit={this.handleFormSubmit.bind(this)} method="POST">
                 <div className="field">
                   <div className="control">

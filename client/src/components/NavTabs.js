@@ -27,12 +27,12 @@ const NavTabs = props => {
         <>
 
           <Navbar.Item>
-            <Link to="/login" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+            <Link to="/login" className={location.pathname === "/" ? "nav-link active naveHeaders is-dark" : "nav-link naveHeaders is-dark"}>
               Login
             </Link>
           </Navbar.Item>
           <Navbar.Item>
-            <Link to="/register" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+            <Link to="/register" className={location.pathname === "/" ? "nav-link active naveHeaders is-dark" : "nav-link naveHeaders is-dark"}>
               Register
             </Link>
           </Navbar.Item>
@@ -45,17 +45,17 @@ const NavTabs = props => {
       <>
 
         <Navbar.Item>
-          <Link to="/search" className={location.pathname === "/search" ? "nav-link active" : "nav-link"}>
+          <Link to="/search" className={location.pathname === "/search" ? "nav-link active naveHeaders is-dark" : "nav-link naveHeaders is-dark"}>
             Search
           </Link>
         </Navbar.Item>
         <Navbar.Item>
-          <Link to="/contact" className={location.pathname === "/contact" ? "nav-link active" : "nav-link"}>
+          <Link to="/contact" className={location.pathname === "/contact" ? "nav-link active naveHeaders is-dark" : "nav-link naveHeaders is-dark"}>
             Contact
           </Link>
         </Navbar.Item>
         <Navbar.Item>
-          <Link to="/signup" className={location.pathname === "/signup" ? "nav-link active" : "nav-link"}>
+          <Link to="/signup" className={location.pathname === "/signup" ? "nav-link active naveHeaders is-dark" : "nav-link naveHeaders is-dark"}>
             Sign Up
           </Link>
         </Navbar.Item>
@@ -70,7 +70,7 @@ const NavTabs = props => {
           : null
         } */}
         <Navbar.Item>
-        <Link className="nav-link"
+        <Link className="nav-link naveHeaders is-dark"
           
           onClick={onClickLogoutHandler}>
           Logout
@@ -95,7 +95,7 @@ const NavTabs = props => {
           <span aria-hidden="true"></span>
       </a> */}
       <Navbar.Item>
-        <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+        <Link to="/" className={location.pathname === "/" ? "nav-link active naveHeaders is-dark" : "nav-link naveHeaders is-dark"}>
           Home
         </Link>
       </Navbar.Item>

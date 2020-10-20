@@ -6,7 +6,7 @@ function Footer() {
 			<footer className="footer">
 				<div className="content has-text-centered">
 					<p>
-						<strong>
+						<strong className="naveHeaders is-dark">
 							AirBob
 						</strong>
 					</p>

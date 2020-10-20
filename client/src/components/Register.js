@@ -3,6 +3,7 @@ import AuthService from "../Services/AuthService";
 import Message from "../components/Message";
 import { Button } from "react-bulma-components";
 import DogSVG from "./DogSVG/DogSVG";
+import "./style/form-styles.css";
 
 const Register = props => {
     const [user, setUser] = useState({ username: "", password: "", email: "", role: ""});
@@ -41,52 +42,69 @@ const Register = props => {
 
     return(
 
-        <div>
-            <form onSubmit={onSubmit}>
-                <h3>Please Register</h3>
-                <label htmlFor="username" classname="sr-only"> Username: </label>
-                <input type="text" 
-                       name="username"
-                       value={user.username}
-                       onChange={onChange} 
-                       className="form-control" 
-                       placeholder="Enter Username" />
-                
-                <label htmlFor="password" classname="sr-only"> Password: </label>
-                <input type="password"
-                       name="password"
-                       value={user.password}
-                       onChange={onChange}
-                       className="form-control"
-                       placeholder="Enter Password" />
+        <div className="hero is-fullheight bG padding-bottom">
+          <div className="padding-top">
+            <div className="container">
+                <DogSVG />
+                <div className="columns is-centered in-front">
+                    <div className="column is-5-tablet is-4-desktop is-3-widescreen">
+                        <form onSubmit={onSubmit}>
+                            <h3 className="is-size-3 loginH3">Please Register</h3>
 
-                <label htmlFor="email" classname="sr-only"> Email: </label>
-                <input type="email"
-                       name="email"
-                       value={user.email}
-                       onChange={onChange}
-                       className="form-control"
-                       placeholder="Enter email address" />
+                            <div className="mt-2">
+                                <label htmlFor="username" className=""> Username: </label>
+                                <input type="text" 
+                                    name="username"
+                                    value={user.username}
+                                    onChange={onChange} 
+                                    className="form-control" 
+                                    placeholder="Enter Username" />
+                            </div>
+                            
+                            <div className="mt-2">
+                            <label htmlFor="password" className="mr-1"> Password: </label>
+                            <input type="password"
+                                name="password"
+                                value={user.password}
+                                onChange={onChange}
+                                className="form-control"
+                                placeholder="Enter Password" />
+                            </div>
 
-                <label htmlFor="role" classname="sr-only"> Role: </label>
-                <input type="text"
-                       name="role"
-                       value={user.role}
-                       onChange={onChange}
-                       className="form-control"
-                       placeholder="Enter Role (admin/user)" />
+                            <div className="mt-2">
+                            <label htmlFor="email" className="mr-5"> Email: </label>
+                            <input type="email"
+                                name="email"
+                                value={user.email}
+                                onChange={onChange}
+                                className="form-control ml-2"
+                                placeholder="Enter email address" />
+                            </div>
 
-                <Button 
-                    className="is-dark is-medium"
-                    type="submit"> Register
-                </Button>
+                            <div className="mt-2">
+                            <label htmlFor="role" className="mr-5"> Role: </label>
+                            <input type="text"
+                                name="role"
+                                value={user.role}
+                                onChange={onChange}
+                                className="form-control ml-4"
+                                placeholder="Enter Role (admin/user)" />
+                            </div>
 
-            </form>
+                            <div className="mt-4">
+                            <Button 
+                                className="is-dark is-medium"
+                                type="submit"> Register
+                            </Button>
+                            </div>
 
-            { message ? <Message message={message} /> : null }
+                        </form>
 
-            <DogSVG />
-            
+                    { message ? <Message message={message} /> : null }
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     )
