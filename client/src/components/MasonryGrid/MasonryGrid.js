@@ -1,6 +1,6 @@
 import React from "react";
 import Masonry from 'react-masonry-css'
-import OneImage from "../OneImage"
+import OneImage2 from "../OneImage2"
 import "./masonry.css";
 
 function MasonryGrid() {
@@ -14,10 +14,10 @@ function MasonryGrid() {
                             breakpointCols={4}
                             columnClassName="my-masonry-grid_column" 
                             brakePoints={1}>
-                    <OneImage />
-                    <OneImage />
-                    <OneImage />
-                    <OneImage />
+                    <OneImage2 />
+                    <OneImage2 />
+                    <OneImage2 />
+                    <OneImage2 />
                 </Masonry>
             </div>
             
