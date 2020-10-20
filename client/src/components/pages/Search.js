@@ -207,6 +207,7 @@ class Search extends Component {
                               state={biz.state}
                               zip={biz.zip}
                               phone={biz.phone}
+                              about={biz.about}
                               price={price}
                             />
                           )

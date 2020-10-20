@@ -17,17 +17,11 @@ class Reservation extends Component {
   }
 
   onChange = date => {
-    console.log(date)
     this.setState({ date })
 }
 
   handleReservation(event) {
     const { id } = this.props.match.params;
-    
-     
-
-    console.log(id);
-
     API.createReservation(
       {
         dateStart: this.state.date[0],
@@ -48,7 +42,7 @@ class Reservation extends Component {
 
     API.getFacilityId(id)
       .then(res => {
-        console.log("res: ", res)
+        // console.log("res: ", res.data)
         this.setState({ info: res.data })
       })
       .catch(error => {
@@ -56,25 +50,16 @@ class Reservation extends Component {
       })
   }
 
-  render() {   
+  render() {  
+    const { info } = this.state
     return (
       <div>
         <div className="section">
         <Container>
           <Columns>
             <Columns.Column className="is-5 is-offset-1">
-            {/* {this.state.info.map((sub, index) => {
-            const price = sub.boardingServices[0].service1[0].price;    
-            return (
-              <div
-              price={sub.price}
-              />
-                
-             
+              <h1 className="bizName">{info.name}</h1>
               
-            )
-          })} */}
-            
               <Calendar
                 onChange={this.onChange}
                 value={this.state.date}
@@ -83,13 +68,8 @@ class Reservation extends Component {
               <Button className="reserve-button is-medium is-dark" onClick={() => this.handleReservation()}>Reserve</Button>
             </Columns.Column>
             <Columns.Column>
-              
-                
-                
-                  <div>
-                    <div className="about">Price Per Night: </div>
-                    <div className="about">Total Cost: </div>
-                  </div>
+              <div className="about search-margin">{info.about}</div>
+              <div className="about search-margin">{info.phone}</div>              
             </Columns.Column>
           </Columns>
         </Container>
@@ -100,3 +80,11 @@ class Reservation extends Component {
 }
 
 export default Reservation;
+
+// {console.log("try: ", this.state.info.boardingServices)}
+//               {this.state.info.boardingServices.map((sub) => {
+//                 const price = sub.service1[0].price;
+//                 return (
+//                   console.log("please", price)
+//                 )
+//               })}
