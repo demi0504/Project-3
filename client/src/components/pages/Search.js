@@ -111,7 +111,7 @@ class Search extends Component {
             <Container>
               <h2 className="subtitle">
                 <div className="thick">
-                  Here you can search for a place to keep your pup!
+                  Find Facilities Near You.
                 </div>
               </h2>
             </Container>

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Axios from 'axios';
 import ContactAlertModal from "../ContactAlertModal";
-import MasonryGrid from "../MasonryGrid/MasonryGrid";
-import { Columns, Container, Hero } from 'react-bulma-components' 
+import { Columns, Container } from 'react-bulma-components' 
 import "../style/imgstyle.css";
 
 class Contact extends Component {
@@ -49,13 +48,10 @@ class Contact extends Component {
     return (
       <div>
         <section className="section">
-          <section className="section">
-            <MasonryGrid />
-          </section>
           <Container>
             <Columns>
               <Columns.Column className="is-half">
-                <h1 className="thick loginH3">Lets Talk!</h1>
+                <h1 className="thick">Let's Talk!</h1>
                 <form id="contact-form" onSubmit={this.handleFormSubmit.bind(this)} method="POST">
                 <div className="field">
                   <div className="control">
@@ -109,9 +105,6 @@ class Contact extends Component {
               </Columns.Column>
             </Columns>
           </Container>
-          <section className="section">
-            <MasonryGrid />
-          </section>
         </section>
       </div>
     );

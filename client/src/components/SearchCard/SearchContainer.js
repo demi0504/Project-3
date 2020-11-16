@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bulma-components";
-import { Columns, Container } from 'react-bulma-components'
-import OneImage from "../OneImage";
 
 
 function SearchContainer(props) {
@@ -13,7 +11,6 @@ function SearchContainer(props) {
             </div>
             <div className="media-content">
               <p className="about">{props.address}</p>
-              <p className="about">{props.city}, {props.state} {props.zip}</p>
             </div>
             <div className="media-content">
               <p className="about">Price Per Night: ${props.price}</p>
@@ -25,7 +22,6 @@ function SearchContainer(props) {
               <Button className="is-dark is-medium reso-btn">Make A Reservation</Button>
             </Link>
             <div className="media-content">
-              <OneImage />
             </div>
         </div>
     ); 
